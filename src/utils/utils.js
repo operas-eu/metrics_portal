@@ -1,5 +1,3 @@
-import moment from 'moment';
-import React from 'react';
 import { parse, stringify } from 'qs';
 
 function getRelation(str1, str2) {
