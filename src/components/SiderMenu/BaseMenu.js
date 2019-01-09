@@ -156,11 +156,6 @@ export default class BaseMenu extends PureComponent {
     } = this.props;
     // if pathname can't match, use the nearest parent's key
     let selectedKeys = this.getSelectedMenuKeys(pathname);
-    if (selectedKeys.length && selectedKeys[0] === undefined) {
-      // terrible hack to highlight 'measures' in the menu when browsing
-      // individual measures (whose paths do not begin with '/measure')
-      selectedKeys = this.overrideForMeasures(pathname);
-    }
     if (!selectedKeys.length && openKeys) {
       selectedKeys = [openKeys[openKeys.length - 1]];
     }
