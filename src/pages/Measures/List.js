@@ -54,9 +54,9 @@ class List extends PureComponent {
       title: '',
       render: (text, record) => (
         <Fragment>
-          <a href={record.path}>
+          <Link to={record.path}>
             <FormattedMessage id="measures.details" />
-          </a>
+          </Link>
         </Fragment>
       )
     }
