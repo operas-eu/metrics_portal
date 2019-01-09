@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
-
+import Link from 'umi/link';
 import styles from './LinkCard.less';
 
 class LinkCard extends React.PureComponent {
@@ -29,7 +29,7 @@ class LinkCard extends React.PureComponent {
         >
           <div className={contentHeight && styles.contentFixed}>{content}</div>
           <div className={styles.action}>
-            <a href={route}>{action}</a>
+            <Link to={route}>{action}</Link>
           </div>
         </div>
       </div>

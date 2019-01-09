@@ -31,7 +31,7 @@ const LinksRow = () => (
           icon={<Icon type="read" theme="filled" />}
           content={<FormattedMessage id="app.home.quickstart" />}
           action={<Button><FormattedMessage id="app.home.quickstart.btn" /></Button>}
-          route="/quickstart"
+          route="/docs/getting-started"
           contentHeight={122}
         />
       </Col>
