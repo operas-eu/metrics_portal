@@ -24,6 +24,22 @@
     <meta property="og:title" content="OPERAS Metrics Portal">
     <meta property="og:description" content="This site serves as an entry point to those interested in how the HIRMEOS project collects usage and alternative metrics for Open Access publications, the motivation behind this project, and how you may implement our Open Source code in your own platform.">
     <meta property="og:url" content="https://metrics.operas-eu.org">
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setCookieDomain", "*.metrics.operas-eu.org"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://analytics.openbookpublishers.com/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '3']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
   </head>
   <body>
     <noscript>Sorry, JavaScript is required to display this site.</noscript>
