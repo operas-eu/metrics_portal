@@ -31,7 +31,9 @@ class List extends PureComponent {
       title: <FormattedMessage id="measures.measure" />,
       dataIndex: 'measure',
       render: val => (
-        <a href={val}>{val.replace('https://', '').replace('http://', '')}</a>
+        <Link href={val}>
+          {val.replace('https://', '').replace('http://', '')}
+        </Link>
       )
     },
     {
