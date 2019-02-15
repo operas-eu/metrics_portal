@@ -1,8 +1,10 @@
 import React, { PureComponent, Suspense } from 'react';
 import { getLocale } from 'umi/locale';
+import Link from 'umi/link';
 import { Card, Col, Row } from 'antd';
 import ReactMarkdown from 'react-markdown';
 
+import { FormattedMessage } from 'umi/locale';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import PageLoading from '@/components/PageLoading';
 import styles from './Docs.less';
@@ -23,11 +25,6 @@ const files = {
   }
 };
 
-const names = {
-  'getting-started': 'Getting Started',
-  'identifier-translation-service': 'Identifier Translation Service'
-};
-
 const paths = {
   'getting-started': '/docs/getting-started',
   'identifier-translation-service': '/docs/identifier-translation-service'
@@ -35,11 +32,11 @@ const paths = {
 
 const menu = [
   {
-    'name': names['getting-started'],
+    'name': <FormattedMessage id="menu.quickstart" />,
     'path': paths['getting-started']
   },
   {
-    'name': names['identifier-translation-service'],
+    'name': <FormattedMessage id="menu.translationsrv" />,
     'path': paths['identifier-translation-service']
   }
 ];
@@ -89,8 +86,9 @@ class Docs extends PureComponent {
               <ul className={styles.menucontainer}>
               {menu.map(entry => (
                   <li className={this.state.pathname == entry.path
-                                 ? styles.itemselected : styles.menuitem}>
-                    <a href={entry.path}>{entry.name}</a>
+                                 ? styles.itemselected : styles.menuitem}
+                      key={entry.path}>
+                    <Link to={entry.path}>{entry.name}</Link>
                   </li>
               ))}
               </ul>
