@@ -191,7 +191,6 @@ class List extends PureComponent {
       <PageHeaderWrapper>
         <Card loading={loading}>
           <div className={styles.tableList}>
-            <div className={styles.tableListForm}>{this.renderForm(data)}</div>
             <StandardTable
               loading={loading}
               data={data}
