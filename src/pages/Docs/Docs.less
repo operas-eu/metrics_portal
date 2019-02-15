@@ -249,6 +249,36 @@
   }
 }
 
+strong {
+  font-weight: bolder;
+}
+
+.menucontainer {
+    border-right: 1px solid #e8e8e8;
+    margin-right: 20px;
+}
+
+.menuitem, .itemselected {
+  width: calc(100% + 1px);
+  padding-left: 44px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemselected {
+  border-right: 4px solid #773970;
+  background-color: #f8f1f8;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #e6f7ff;
+}
+
 .grid-demo,
 [id^='components-grid-demo-'] {
   .demo-row,
