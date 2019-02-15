@@ -36,6 +36,12 @@ export default [
             icon: 'read',
             component: './Docs/Docs',
           },
+          {
+            path: '/docs/identifier-translation-service',
+            name: 'translationsrv',
+            icon: 'read',
+            component: './Docs/Docs',
+          }
         ]
       },
       {
