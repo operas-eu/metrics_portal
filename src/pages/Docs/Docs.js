@@ -8,21 +8,29 @@ import PageLoading from '@/components/PageLoading';
 import styles from './Docs.less';
 
 import gettingStarted_enGB from './getting-started.en-GB.md';
-import gettingStarted_esES from './getting-started.es-ES.md';
+import gettingStarted_esES from './getting-started.en-GB.md';
+import translationSrv_enGB from './identifier-translation-service.en-GB.md';
+import translationSrv_esES from './identifier-translation-service.en-GB.md';
 
 const files = {
   'getting-started': {
     'en-GB': gettingStarted_enGB,
     'es-ES': gettingStarted_esES
+  },
+  'identifier-translation-service': {
+    'en-GB': translationSrv_enGB,
+    'es-ES': translationSrv_esES
   }
 };
 
 const names = {
-  'getting-started': 'Getting Started'
+  'getting-started': 'Getting Started',
+  'identifier-translation-service': 'Identifier Translation Service'
 };
 
 const paths = {
-  'getting-started': '/docs/getting-started'
+  'getting-started': '/docs/getting-started',
+  'identifier-translation-service': '/docs/identifier-translation-service'
 };
 
 const menu = [
@@ -30,6 +38,10 @@ const menu = [
     'name': names['getting-started'],
     'path': paths['getting-started']
   },
+  {
+    'name': names['identifier-translation-service'],
+    'path': paths['identifier-translation-service']
+  }
 ];
 
 const menuColResponsiveProps = {
@@ -55,7 +67,8 @@ class Docs extends PureComponent {
   }
 
   componentWillMount() {
-    const path = window.location.pathname.replace('/docs/', '');
+    const pathname = window.location.pathname;
+    const path = pathname.replace('/docs/', '');
     const selectedLang = getLocale();
     const fileName = files[path][selectedLang];
     fetch(fileName)
@@ -63,7 +76,7 @@ class Docs extends PureComponent {
         return response.text()
       })
       .then(text => {
-        this.setState({ markdown: text, path })
+        this.setState({ markdown: text, path, pathname })
       })
   }
 
@@ -73,9 +86,12 @@ class Docs extends PureComponent {
         <Card>
           <Row>
             <Col {...menuColResponsiveProps}>
-              <ul>
+              <ul className={styles.menucontainer}>
               {menu.map(entry => (
-                  <li><a href={entry.path}>{entry.name}</a></li>
+                  <li className={this.state.pathname == entry.path
+                                 ? styles.itemselected : styles.menuitem}>
+                    <a href={entry.path}>{entry.name}</a>
+                  </li>
               ))}
               </ul>
             </Col>
