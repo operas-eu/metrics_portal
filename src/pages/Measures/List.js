@@ -30,10 +30,12 @@ class List extends PureComponent {
     {
       title: <FormattedMessage id="measures.measure" />,
       dataIndex: 'measure',
-      render: val => (
-        <Link to={val}>
-          {val.replace('https://', '').replace('http://', '')}
-        </Link>
+      render: (text, record) => (
+        <Fragment>
+          <Link to={record.path}>
+              {record.measure.replace('https://', '').replace('http://', '')}
+          </Link>
+        </Fragment>
       )
     },
     {
