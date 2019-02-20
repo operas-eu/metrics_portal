@@ -1,5 +1,6 @@
 import React, { PureComponent, Suspense } from 'react';
 import { getLocale } from 'umi/locale';
+import router from 'umi/router';
 import { Card, Col, Row } from 'antd';
 import ReactMarkdown from 'react-markdown';
 
@@ -9,6 +10,8 @@ import styles from './Docs.less';
 
 // Document paths and menu items are specified in data.js
 import { files, paths, menu } from './data.js';
+
+const defaultLang = 'en-GB';
 
 const menuColResponsiveProps = {
   xs: 24,
@@ -35,16 +38,24 @@ class Docs extends PureComponent {
   componentWillMount() {
     const pathname = window.location.pathname;
     const path = pathname.replace('/docs/', '');
-    // const selectedLang = getLocale();
-    const selectedLang = 'en-GB';
-    const fileName = files[path][selectedLang];
-    fetch(fileName)
-      .then(response => {
-        return response.text()
-      })
-      .then(text => {
-        this.setState({ markdown: text, path, pathname })
-      })
+    const selectedLang = getLocale();
+    let fileName = "";
+    if (path in files) {
+      if (selectedLang in files[path]) {
+        fileName = files[path][selectedLang];
+      } else {
+        fileName = files[path][defaultLang];
+      }
+      fetch(fileName)
+        .then(response => {
+          return response.text()
+        })
+        .then(text => {
+          this.setState({ markdown: text, path, pathname })
+        });
+    } else {
+      router.push('/exception/404');
+    }
   }
 
   render() {
