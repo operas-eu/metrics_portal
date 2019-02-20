@@ -4,42 +4,12 @@ import Link from 'umi/link';
 import { Card, Col, Row } from 'antd';
 import ReactMarkdown from 'react-markdown';
 
-import { FormattedMessage } from 'umi/locale';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import PageLoading from '@/components/PageLoading';
 import styles from './Docs.less';
 
-import gettingStarted_enGB from './getting-started.en-GB.md';
-import gettingStarted_esES from './getting-started.en-GB.md';
-import translationSrv_enGB from './identifier-translation-service.en-GB.md';
-import translationSrv_esES from './identifier-translation-service.en-GB.md';
-
-const files = {
-  'getting-started': {
-    'en-GB': gettingStarted_enGB,
-    'es-ES': gettingStarted_esES
-  },
-  'identifier-translation-service': {
-    'en-GB': translationSrv_enGB,
-    'es-ES': translationSrv_esES
-  }
-};
-
-const paths = {
-  'getting-started': '/docs/getting-started',
-  'identifier-translation-service': '/docs/identifier-translation-service'
-};
-
-const menu = [
-  {
-    'name': <FormattedMessage id="menu.quickstart" />,
-    'path': paths['getting-started']
-  },
-  {
-    'name': <FormattedMessage id="menu.translationsrv" />,
-    'path': paths['identifier-translation-service']
-  }
-];
+// Document paths and menu items are specified in data.js
+import { files, paths, menus } from './data.js';
 
 const menuColResponsiveProps = {
   xs: 24,
@@ -66,7 +36,8 @@ class Docs extends PureComponent {
   componentWillMount() {
     const pathname = window.location.pathname;
     const path = pathname.replace('/docs/', '');
-    const selectedLang = getLocale();
+    // const selectedLang = getLocale();
+    const selectedLang = 'en-GB';
     const fileName = files[path][selectedLang];
     fetch(fileName)
       .then(response => {
