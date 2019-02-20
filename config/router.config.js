@@ -24,13 +24,10 @@ export default [
         component: './Principles/Principles',
       },
       {
-        path: '/docs/:doc',
-        component: './Docs/Docs',
-      },
-      {
-        path: '/docs',
+        path: '/docs/:doc?',
         name: 'documentation',
         icon: 'read',
+        component: './Docs/Docs',
         hideChildrenInMenu: true,
         routes: [
           { path: '/docs', redirect: '/docs/getting-started' }
