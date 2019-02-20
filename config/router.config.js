@@ -24,24 +24,16 @@ export default [
         component: './Principles/Principles',
       },
       {
+        path: '/docs/:doc',
+        component: './Docs/Docs',
+      },
+      {
         path: '/docs',
         name: 'documentation',
         icon: 'read',
         hideChildrenInMenu: true,
         routes: [
-          { path: '/docs', redirect: '/docs/getting-started' },
-          {
-            path: '/docs/getting-started',
-            name: 'quickstart',
-            icon: 'read',
-            component: './Docs/Docs',
-          },
-          {
-            path: '/docs/identifier-translation-service',
-            name: 'translationsrv',
-            icon: 'read',
-            component: './Docs/Docs',
-          }
+          { path: '/docs', redirect: '/docs/getting-started' }
         ]
       },
       {
