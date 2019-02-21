@@ -1,7 +1,7 @@
 import { stringify } from 'qs';
-import request from '@/utils/request';
+import getMeasure from '@/utils/measure';
 
 /* eslint-disable import/prefer-default-export */
 export async function queryMeasure(params) {
-  return request(`/api/measures?${stringify(params)}`);
+  return getMeasure(`/api/measures?${stringify(params)}`);
 }
