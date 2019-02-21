@@ -1,70 +1,71 @@
+import React from 'react';
 import { FormattedMessage } from 'umi/locale';
 
-import gettingStarted_enGB from './markdown/getting-started.en-GB.md';
-import translationSrv_enGB from './markdown/identifier-translation-service.en-GB.md';
-import googleAnalytics_enGB from './markdown/google-analytics.en-GB.md';
-import matomo_enGB from './markdown/matomo.en-GB.md';
-import accessLogs_enGB from './markdown/access-logs.en-GB.md';
-import googleBooks_enGB from './markdown/google-books.en-GB.md';
-import openEdition_enGB from './markdown/open-edition.en-GB.md';
-import oapen_enGB from './markdown/oapen.en-GB.md';
-import jstor_enGB from './markdown/jstor.en-GB.md';
-import worldReader_enGB from './markdown/world-reader.en-GB.md';
-import unglueit_enGB from './markdown/unglueit.en-GB.md';
-import openaire_enGB from './markdown/openaire.en-GB.md';
-import irusUk_enGB from './markdown/irus-uk.en-GB.md';
-import wikiversity_enGB from './markdown/wikiversity.en-GB.md';
-import metricsApi_enGB from './markdown/metrics-api.en-GB.md';
-import countriesApi_enGB from './markdown/countries-api.en-GB.md';
+import gettingStartedEnGB from './markdown/getting-started.en-GB.md';
+import translationSrvEnGB from './markdown/identifier-translation-service.en-GB.md';
+import googleAnalyticsEnGB from './markdown/google-analytics.en-GB.md';
+import matomoEnGB from './markdown/matomo.en-GB.md';
+import accessLogsEnGB from './markdown/access-logs.en-GB.md';
+import googleBooksEnGB from './markdown/google-books.en-GB.md';
+import openEditionEnGB from './markdown/open-edition.en-GB.md';
+import oapenEnGB from './markdown/oapen.en-GB.md';
+import jstorEnGB from './markdown/jstor.en-GB.md';
+import worldReaderEnGB from './markdown/world-reader.en-GB.md';
+import unglueitEnGB from './markdown/unglueit.en-GB.md';
+import openaireEnGB from './markdown/openaire.en-GB.md';
+import irusUkEnGB from './markdown/irus-uk.en-GB.md';
+import wikiversityEnGB from './markdown/wikiversity.en-GB.md';
+import metricsApiEnGB from './markdown/metrics-api.en-GB.md';
+import countriesApiEnGB from './markdown/countries-api.en-GB.md';
 
 export const files = {
   'getting-started': {
-    'en-GB': gettingStarted_enGB
+    'en-GB': gettingStartedEnGB
   },
   'identifier-translation-service': {
-    'en-GB': translationSrv_enGB
+    'en-GB': translationSrvEnGB
   },
   'google-analytics': {
-    'en-GB': googleAnalytics_enGB
+    'en-GB': googleAnalyticsEnGB
   },
   'matomo': {
-    'en-GB': matomo_enGB
+    'en-GB': matomoEnGB
   },
   'access-logs': {
-    'en-GB': accessLogs_enGB
+    'en-GB': accessLogsEnGB
   },
   'google-books': {
-    'en-GB': googleBooks_enGB
+    'en-GB': googleBooksEnGB
   },
   'open-edition': {
-    'en-GB': openEdition_enGB
+    'en-GB': openEditionEnGB
   },
   'oapen': {
-    'en-GB': oapen_enGB
+    'en-GB': oapenEnGB
   },
   'jstor': {
-    'en-GB': jstor_enGB
+    'en-GB': jstorEnGB
   },
   'world-reader': {
-    'en-GB': worldReader_enGB
+    'en-GB': worldReaderEnGB
   },
   'unglueit': {
-    'en-GB': unglueit_enGB
+    'en-GB': unglueitEnGB
   },
   'openaire': {
-    'en-GB': openaire_enGB
+    'en-GB': openaireEnGB
   },
   'irus-uk': {
-    'en-GB': irusUk_enGB
+    'en-GB': irusUkEnGB
   },
   'wikiversity': {
-    'en-GB': wikiversity_enGB
+    'en-GB': wikiversityEnGB
   },
   'metrics-api': {
-    'en-GB': metricsApi_enGB
+    'en-GB': metricsApiEnGB
   },
   'countries-api': {
-    'en-GB': countriesApi_enGB
+    'en-GB': countriesApiEnGB
   }
 };
 
@@ -87,85 +88,118 @@ export const paths = {
   'countries-api': '/docs/countries-api'
 };
 
+/* eslint-disable dot-notation */
 export const menu = [
   {
-    'name': <FormattedMessage id="menu.quickstart"
-             defaultMessage="Getting Started" />,
+    'name': <FormattedMessage
+      id="menu.quickstart"
+      defaultMessage="Getting Started"
+    />,
     'path': paths['getting-started']
   },
   {
-    'name': <FormattedMessage id="menu.translationsrv"
-             defaultMessage="Identifier Translation Service" />,
+    'name': <FormattedMessage
+      id="menu.translationsrv"
+      defaultMessage="Identifier Translation Service"
+    />,
     'path': paths['identifier-translation-service']
   },
   {
-    'name': <FormattedMessage id="menu.metricsapi"
-             defaultMessage="Metrics API" />,
+    'name': <FormattedMessage
+      id="menu.metricsapi"
+      defaultMessage="Metrics API"
+    />,
     'path': paths['metrics-api']
   },
   {
-    'name': <FormattedMessage id="menu.googleanalytics"
-             defaultMessage="Google Analytics Driver" />,
+    'name': <FormattedMessage
+      id="menu.googleanalytics"
+      defaultMessage="Google Analytics Driver"
+    />,
     'path': paths['google-analytics']
   },
   {
-    'name': <FormattedMessage id="menu.matomo"
-             defaultMessage="Matomo Driver" />,
+    'name': <FormattedMessage
+      id="menu.matomo"
+      defaultMessage="Matomo Driver"
+    />,
     'path': paths['matomo']
   },
   {
-    'name': <FormattedMessage id="menu.accesslogs"
-             defaultMessage="Access Logs Driver" />,
+    'name': <FormattedMessage
+      id="menu.accesslogs"
+      defaultMessage="Access Logs Driver"
+    />,
     'path': paths['access-logs']
   },
   {
-    'name': <FormattedMessage id="menu.googlebooks"
-             defaultMessage="Google Books Driver" />,
+    'name': <FormattedMessage
+      id="menu.googlebooks"
+      defaultMessage="Google Books Driver"
+    />,
     'path': paths['google-books']
   },
   {
-    'name': <FormattedMessage id="menu.openedition"
-             defaultMessage="Open Edition Driver" />,
+    'name': <FormattedMessage
+      id="menu.openedition"
+      defaultMessage="Open Edition Driver"
+    />,
     'path': paths['open-edition']
   },
   {
-    'name': <FormattedMessage id="menu.oapen"
-             defaultMessage="OAPEN Driver" />,
+    'name': <FormattedMessage
+      id="menu.oapen"
+      defaultMessage="OAPEN Driver"
+    />,
     'path': paths['oapen']
   },
   {
-    'name': <FormattedMessage id="menu.jstor"
-             defaultMessage="JSTOR Driver" />,
+    'name': <FormattedMessage
+      id="menu.jstor"
+      defaultMessage="JSTOR Driver"
+    />,
     'path': paths['jstor']
   },
   {
-    'name': <FormattedMessage id="menu.worldreader"
-             defaultMessage="World Reader Driver" />,
+    'name': <FormattedMessage
+      id="menu.worldreader"
+      defaultMessage="World Reader Driver"
+    />,
     'path': paths['world-reader']
   },
   {
-    'name': <FormattedMessage id="menu.unglueit"
-             defaultMessage="Unglue.it Driver" />,
+    'name': <FormattedMessage
+      id="menu.unglueit"
+      defaultMessage="Unglue.it Driver"
+    />,
     'path': paths['unglueit']
   },
   {
-    'name': <FormattedMessage id="menu.openaire"
-             defaultMessage="OpenAIRE Driver" />,
+    'name': <FormattedMessage
+      id="menu.openaire"
+      defaultMessage="OpenAIRE Driver"
+    />,
     'path': paths['openaire']
   },
   {
-    'name': <FormattedMessage id="menu.irusuk"
-             defaultMessage="IRUS-UK Driver" />,
+    'name': <FormattedMessage
+      id="menu.irusuk"
+      defaultMessage="IRUS-UK Driver"
+    />,
     'path': paths['irus-uk']
   },
   {
-    'name': <FormattedMessage id="menu.wikiversity"
-             defaultMessage="Wikiversity Driver" />,
+    'name': <FormattedMessage
+      id="menu.wikiversity"
+      defaultMessage="Wikiversity Driver"
+    />,
     'path': paths['wikiversity']
   },
   {
-    'name': <FormattedMessage id="menu.countriesapi"
-             defaultMessage="Countries API" />,
+    'name': <FormattedMessage
+      id="menu.countriesapi"
+      defaultMessage="Countries API"
+    />,
     'path': paths['countries-api']
   }
 ];
