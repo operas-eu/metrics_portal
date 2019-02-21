@@ -4,12 +4,11 @@ import router from 'umi/router';
 import { Card, Col, Row } from 'antd';
 import ReactMarkdown from 'react-markdown';
 
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import PageLoading from '@/components/PageLoading';
 import styles from './Docs.less';
 
 // Document paths and menu items are specified in data.js
-import { files, paths, menu } from './data.js';
+import { files, menu } from './data';
 
 const defaultLang = 'en-GB';
 
@@ -32,11 +31,11 @@ const textColResponsiveProps = {
 class Docs extends PureComponent {
   constructor(props) {
     super(props)
-    this.state = { terms: null }
+    this.state = { pathname: null }
   }
 
   componentWillMount() {
-    const pathname = window.location.pathname;
+    const { pathname } = window.location;
     const path = pathname.replace('/docs/', '');
     const selectedLang = getLocale();
     let fileName = "";
@@ -47,11 +46,9 @@ class Docs extends PureComponent {
         fileName = files[path][defaultLang];
       }
       fetch(fileName)
-        .then(response => {
-          return response.text()
-        })
+        .then(response => response.text())
         .then(text => {
-          this.setState({ markdown: text, path, pathname })
+          this.setState({ markdown: text, pathname })
         });
     } else {
       router.push('/exception/404');
@@ -59,25 +56,29 @@ class Docs extends PureComponent {
   }
 
   render() {
+    const { markdown, pathname } = this.state;
     return (
       <Suspense fallback={<PageLoading />}>
         <Card>
           <Row>
             <Col {...menuColResponsiveProps}>
               <ul className={styles.menucontainer}>
-              {menu.map(entry => (
-                  <li className={this.state.pathname == entry.path
+                {menu.map(entry => (
+                  <li
+                    className={pathname === entry.path
                                  ? styles.itemselected : styles.menuitem}
-                      key={entry.path}>
+                    key={entry.path}
+                  >
                     <a href={entry.path}>{entry.name}</a>
                   </li>
-              ))}
+                ))}
               </ul>
             </Col>
             <Col {...textColResponsiveProps}>
               <ReactMarkdown
                 className={styles.markdown}
-                source={this.state.markdown} />
+                source={markdown}
+              />
             </Col>
           </Row>
         </Card>
