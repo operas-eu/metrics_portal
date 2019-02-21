@@ -148,8 +148,7 @@ const tableListDataSource = [{
 }];
 
 function getMeasure(u) {
-  let url = u;
-  const params = parse(url, true).query;
+  const params = parse(u, true).query;
 
   let dataSource = tableListDataSource;
 
