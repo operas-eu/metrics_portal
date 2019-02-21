@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   metrics_portal_build:
-    build: ./
+    image: openbookpublishers/metrics_portal
     container_name: "metrics_portal_build"
     volumes:
       - dist:/usr/src/app/dist
