@@ -5,7 +5,6 @@ export default {
   'menu.documentation': 'Documentation',
   'menu.translationsrv': 'Identifier Translation Service',
   'menu.quickstart': 'Getting Started',
-  'menu.translationsrv': 'Identifier translation Service',
   'menu.metricsapi': 'Metrics API',
   'menu.googleanalytics': 'Google Analytics Driver',
   'menu.matomo': 'Matomo Driver',
