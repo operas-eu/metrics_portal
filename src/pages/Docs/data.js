@@ -95,7 +95,7 @@ export const menu = [
   },
   {
     'name': <FormattedMessage id="menu.translationsrv"
-             defaultMessage="Identifier translation Service" />,
+             defaultMessage="Identifier Translation Service" />,
     'path': paths['identifier-translation-service']
   },
   {
