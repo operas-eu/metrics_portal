@@ -116,6 +116,7 @@ class List extends PureComponent {
       loading
     } = this.props;
 
+    /* eslint-disable react/no-danger */
     return data && data.measure ? (
       <PageHeaderWrapper
         loading={loading}

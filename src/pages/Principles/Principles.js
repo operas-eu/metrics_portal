@@ -5,6 +5,7 @@ import { Card } from 'antd';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import PageLoading from '@/components/PageLoading';
 
+/* eslint-disable react/no-danger */
 const Principles = () => (
   <PageHeaderWrapper>
     <Suspense fallback={<PageLoading />}>

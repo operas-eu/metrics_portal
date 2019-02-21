@@ -33,7 +33,7 @@ class List extends PureComponent {
       render: (text, record) => (
         <Fragment>
           <Link to={record.path}>
-              {record.measure.replace('https://', '').replace('http://', '')}
+            {record.measure.replace('https://', '').replace('http://', '')}
           </Link>
         </Fragment>
       )
