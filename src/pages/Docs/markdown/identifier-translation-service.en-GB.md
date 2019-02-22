@@ -237,11 +237,14 @@ In this example we use a fictional parent UUID, which could be one of a book ser
 ### More
 Check some more [example queries][6].
 
-## Crosref extension
-The main purpose of this service was to store as many URIs per publication as possible, and it's unlikely that the user of this software will be aware of all of them. For this reason you may set up [hirmeos/crossref_uri_import][3] to periodically query Crossref's API with your DOIs and populate the translation service with potential new data (e.g. multiple DOIs assigned to the same publication, multiple resolution URLs).
-
 ## Populating the database
 You may write your own version of [OpenBookPublishers/obp_product_import][4] to populate the translation service with your existing data. Or you can use this script to add individual URIs to an existing publication: [OpenBookPublishers/obp_uri_import][5]
+
+### Crosref extension
+The main purpose of this service was to store as many URIs per publication as possible, and it's unlikely that the user of this software will be aware of all of them. For this reason you may set up [hirmeos/crossref_uri_import][3] to periodically query Crossref's API with your DOIs and populate the translation service with potential new data (e.g. multiple DOIs assigned to the same publication, multiple resolution URLs).
+
+### OAI Extension
+Although it is expected that you will populate the database with custom code, in some cases work identifiers will be determined by third-party (e.g. URLs in a distributing platform), in which case you may configure [hirmeos/oai_uri_import][8] to populate the database via OAI.
 
 [1]: https://github.com/hirmeos/identifiers_db "Identifiers database"
 [2]: https://github.com/hirmeos/tokens_api "Tokens API"
@@ -250,3 +253,4 @@ You may write your own version of [OpenBookPublishers/obp_product_import][4] to 
 [5]: https://github.com/OpenBookPublishers/obp_uri_import "OBP URI import"
 [6]: https://docs.google.com/document/d/1aEwV_6CF8ha5M5yRu6FsYWQBDbTMeazWDIj1h3kLSec/edit "Example queries"
 [7]: https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml "URI Schemes"
+[8]: https://github.com/hirmeos/oai_uri_import "OAI URI Import"
