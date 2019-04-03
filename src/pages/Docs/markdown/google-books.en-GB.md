@@ -55,7 +55,7 @@ MODES=[{"measure":"https://metrics.operas-eu.org/google-books/views/v1","name":"
 
 ## Run via crontab
 ```
-0 0 * * 0 docker run --rm --name "google_books_driver" --env-file /path/to/config.env -v google_books_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_books_driver
+0 0 * * 0 docker run --rm --name "google_books_driver" --env-file /path/to/config.env -v google_books_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_books_driver:1
 ```
 
 ## Troubleshooting
