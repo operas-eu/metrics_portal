@@ -11,6 +11,7 @@ As part of Work Package 6 of the [HIRMEOS project][1] [Open Book Publishers][2] 
 The HIRMEOS metrics suite is made of:
 - [Identifier Translation Service][16]. Used to normalise identifiers.
 - Drivers. Used to collect and normalise data from reporting platforms.
+- [Tokens API][19]. Used to generate JSON Web Tokens to authenticate all the various services.
 - [Metrics API][17]. Used to store and retrieve normalised data.
 - [Countries API][18]. Used by some drivers to normalise geographical data.
 
@@ -68,3 +69,4 @@ You may find more information, including slides, [here][15]
 [16]: https://metrics.operas-eu.org/docs/identifier-translation-service "Translation service"
 [17]: https://metrics.operas-eu.org/docs/metrics-api "Metrics API"
 [18]: https://metrics.operas-eu.org/docs/countries-api "Countries API"
+[19]: https://metrics.operas-eu.org/docs/tokens-api "Tokens API"
