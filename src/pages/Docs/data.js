@@ -115,6 +115,13 @@ export const menu = [
       defaultMessage="Tokens API"
     />,
     'path': paths['tokens-api']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.googlebooks"
+      defaultMessage="Google Books Driver"
+    />,
+    'path': paths['google-books']
   }
 ];
 
