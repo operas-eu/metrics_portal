@@ -17,6 +17,7 @@ import irusUkEnGB from './markdown/irus-uk.en-GB.md';
 import wikiversityEnGB from './markdown/wikiversity.en-GB.md';
 import metricsApiEnGB from './markdown/metrics-api.en-GB.md';
 import countriesApiEnGB from './markdown/countries-api.en-GB.md';
+import tokensApiEnGB from './markdown/tokens-api.en-GB.md';
 
 export const files = {
   'getting-started': {
@@ -66,6 +67,9 @@ export const files = {
   },
   'countries-api': {
     'en-GB': countriesApiEnGB
+  },
+  'tokens-api': {
+    'en-GB': tokensApiEnGB
   }
 };
 
@@ -85,7 +89,8 @@ export const paths = {
   'irus-uk': '/docs/irus-uk',
   'wikiversity': '/docs/wikiversity',
   'metrics-api': '/docs/metrics-api',
-  'countries-api': '/docs/countries-api'
+  'countries-api': '/docs/countries-api',
+  'tokens-api': '/docs/tokens-api'
 };
 
 /* eslint-disable dot-notation */
@@ -106,101 +111,10 @@ export const menu = [
   },
   {
     'name': <FormattedMessage
-      id="menu.metricsapi"
-      defaultMessage="Metrics API"
+      id="menu.tokensapi"
+      defaultMessage="Tokens API"
     />,
-    'path': paths['metrics-api']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.googleanalytics"
-      defaultMessage="Google Analytics Driver"
-    />,
-    'path': paths['google-analytics']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.matomo"
-      defaultMessage="Matomo Driver"
-    />,
-    'path': paths['matomo']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.accesslogs"
-      defaultMessage="Access Logs Driver"
-    />,
-    'path': paths['access-logs']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.googlebooks"
-      defaultMessage="Google Books Driver"
-    />,
-    'path': paths['google-books']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.openedition"
-      defaultMessage="Open Edition Driver"
-    />,
-    'path': paths['open-edition']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.oapen"
-      defaultMessage="OAPEN Driver"
-    />,
-    'path': paths['oapen']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.jstor"
-      defaultMessage="JSTOR Driver"
-    />,
-    'path': paths['jstor']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.worldreader"
-      defaultMessage="World Reader Driver"
-    />,
-    'path': paths['world-reader']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.unglueit"
-      defaultMessage="Unglue.it Driver"
-    />,
-    'path': paths['unglueit']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.openaire"
-      defaultMessage="OpenAIRE Driver"
-    />,
-    'path': paths['openaire']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.irusuk"
-      defaultMessage="IRUS-UK Driver"
-    />,
-    'path': paths['irus-uk']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.wikiversity"
-      defaultMessage="Wikiversity Driver"
-    />,
-    'path': paths['wikiversity']
-  },
-  {
-    'name': <FormattedMessage
-      id="menu.countriesapi"
-      defaultMessage="Countries API"
-    />,
-    'path': paths['countries-api']
+    'path': paths['tokens-api']
   }
 ];
 
