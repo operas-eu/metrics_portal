@@ -2,7 +2,7 @@
 - **Source**: https://github.com/hirmeos/google_books_driver
 - **Image**: https://hub.docker.com/r/openbookpublishers/google_books_driver
 
-This driver allows programmatic retrieval and normalisation of Goole Books usage reports.
+This driver allows programmatic retrieval and normalisation of Google Books usage reports.
 
 The driver is made of two modules: the first one scrapes usage reports from Google Books and stores them in a directory (`CACHEDIR`); the second reads from cache, normalises the reports, and outputs to a different directory (`OUTDIR`). We recommend running this driver in a docker container and mapping both `CACHEDIR` and `OUTDIR` to persistent volumes.
 
