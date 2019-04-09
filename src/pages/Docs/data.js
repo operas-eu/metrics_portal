@@ -122,6 +122,13 @@ export const menu = [
       defaultMessage="Google Books Driver"
     />,
     'path': paths['google-books']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.googleanalytics"
+      defaultMessage="Google Analytics Driver"
+    />,
+    'path': paths['google-analytics']
   }
 ];
 
