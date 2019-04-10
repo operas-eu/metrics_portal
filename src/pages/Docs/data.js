@@ -136,6 +136,13 @@ export const menu = [
       defaultMessage="World Reader Driver"
     />,
     'path': paths['world-reader']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.openedition"
+      defaultMessage="Open Edition Driver"
+    />,
+    'path': paths['open-edition']
   }
 ];
 
