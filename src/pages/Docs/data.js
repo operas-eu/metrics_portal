@@ -122,6 +122,27 @@ export const menu = [
       defaultMessage="Google Books Driver"
     />,
     'path': paths['google-books']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.googleanalytics"
+      defaultMessage="Google Analytics Driver"
+    />,
+    'path': paths['google-analytics']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.worldreader"
+      defaultMessage="World Reader Driver"
+    />,
+    'path': paths['world-reader']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.openedition"
+      defaultMessage="Open Edition Driver"
+    />,
+    'path': paths['open-edition']
   }
 ];
 
