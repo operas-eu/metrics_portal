@@ -58,7 +58,7 @@ Each entry of the `MODES` array must contain values for `measure`, `name`, `star
 
 | Attribute   | Description                                                                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------------ |
-| `measure`   | A URI identifying the type of measure. You may use https://metrics.operas-eu.org/google-books/views/v1       |
+| `measure`   | A URI identifying the type of measure. You may use https://metrics.operas-eu.org/world-reader/users/v1       |
 | `name`      | The name of this mode. This is not too important, though it is used as the prefix of cache and output files. |
 | `startDate` | The first date in which your account has usage data available in Google Books (YYYY-MM-DD format)            |
 | `config`    | An array containing dictionaries with the report URLs (see example below)                                    |
