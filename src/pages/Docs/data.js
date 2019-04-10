@@ -129,6 +129,13 @@ export const menu = [
       defaultMessage="Google Analytics Driver"
     />,
     'path': paths['google-analytics']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.worldreader"
+      defaultMessage="World Reader Driver"
+    />,
+    'path': paths['world-reader']
   }
 ];
 
