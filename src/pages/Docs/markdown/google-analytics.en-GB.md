@@ -33,6 +33,25 @@ The following environment variables must be set. You can find a template in `./c
 | `CUTOFF_DAYS`           | The driver will get reports until today minus `CUTOFF_DAYS`.                     |
 
 
+### Example `config.env` file
+
+```
+MODES=["measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2014-02-26","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
+EXCLUDED_URLS=[]
+OUTDIR=/usr/src/app/output
+CACHEDIR=/usr/src/app/cache
+KEY_PATH=/usr/src/app/config/key.json
+URI_API_ENDP=https://identifier.translation.service/translate
+AUTH_API_ENDP=https://authentication.service/tokens
+URI_API_USER=admin_user@openbookpublishers.com
+URI_API_PASS=some_secret_password
+URI_SCHEME=info:doi
+COUNTRY_URI_SCHEME=urn:iso:std:3166:-2
+URI_STRICT=false
+CUTOFF_DAYS=1
+```
+
+
 ### The `MODES` env variable
 You must define a JSON array in`MODES`, with at least one record. The driver will iterate through the array, performing its task once per mode; in a typical case there will only be one entry in the array, however this configuration allows one single driver to query reports from multiple google books accounts.
 
