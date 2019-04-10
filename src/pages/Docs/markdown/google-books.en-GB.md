@@ -78,4 +78,4 @@ MODES=[{"measure":"https://metrics.operas-eu.org/google-books/views/v1","name":"
 ## Troubleshooting
 It is very important to check the output the first time the driver is run as it is very likely that Google will block the 'suspicious' login attempt. If it does, you will need to login with the same credentials you have provided the driver with and review the security settings, Google will ask if you were prevented from logging in and you must confirm so. Afterwards re-run the driver and it should work just fine.
 
-[1]: https://github.com/hirmeos/identifier_translation_service "Identifier Translation Service"
+[1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Identifier Translation Service"
