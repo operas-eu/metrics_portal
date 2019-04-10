@@ -52,7 +52,7 @@ URI_STRICT=true
 ```
 
 ### The `MODES` env variable
-You must define a JSON array in`MODES`, with at least one record. The driver will iterate through the array, performing its task once per mode; in a typical case there will only be one entry in the array, however this configuration allows one single driver to query reports from multiple google books accounts.
+You must define a JSON array in`MODES`, with at least one record. The driver will iterate through the array, performing its task once per mode; in a typical case there will only be one entry in the array.
 
 Each entry of the `MODES` array must contain values for `measure`, `name`, `startDate`, and `config`.
 
