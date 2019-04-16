@@ -1,7 +1,7 @@
 # Getting Started
 
 ## Foreword
-Usage metrics have been widely adopted in Open Access works as an indication of the popularity or acceptance of a particular publication. Innevitably, performance assesment and funding allocation is being based on these statistics. However, While we do not agree with these practices, we acknowledge that metrics collection and reporting is nowadays a fundamental need for any organisations producing and/or hosting digital monographs.
+Usage metrics have been widely adopted in Open Access works as an indication of the popularity or acceptance of a particular publication. Inevitably, performance assessment and funding allocation is being based on these statistics. However, while we do not agree with these practices, we acknowledge that metrics collection and reporting is nowadays a fundamental need for any organisations producing and/or hosting digital monographs.
 
 Thanks to their licenses, Open Access publications are disseminated across multiple platforms and repositories. However, publishers and distributing platforms simply collect usage data from their own system, due to the lack of public APIs that could allow programmatic collection of data from all the various websites hosting a publication. Most usage metrics available within distributing platforms display data for that particular website, not for the publication.
 
