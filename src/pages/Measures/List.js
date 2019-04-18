@@ -22,8 +22,16 @@ const getValue = obj =>
 }))
 @Form.create()
 class List extends PureComponent {
+  pageSize = localStorage.getItem('metrics-measure-pagesize');
+
   state = {
-    formValues: {}
+    formValues: {},
+    pagination: {
+      pageSize: parseInt(this.pageSize, 10) || 50,
+      showSizeChanger: true,
+      showQuickJumper: false,
+      pageSizeOptions: ['10', '25', '50', '100']
+    }
   };
 
   columns = [
@@ -93,6 +101,8 @@ class List extends PureComponent {
     if (sorter.field) {
       params.sorter = `${sorter.field}_${sorter.order}`;
     }
+
+    localStorage.setItem('metrics-measure-pagesize', pagination.pageSize);
 
     dispatch({
       type: 'measure/fetch',
@@ -191,12 +201,15 @@ class List extends PureComponent {
       loading
     } = this.props;
 
+    const { pagination } = this.state;
+
     return data && data.list && data.list.length ? (
       <PageHeaderWrapper>
         <Card loading={loading}>
           <div className={styles.tableList}>
             <StandardTable
               loading={loading}
+              pagination={pagination}
               data={data}
               columns={this.columns}
               onChange={this.handleStandardTableChange}
