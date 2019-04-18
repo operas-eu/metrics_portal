@@ -155,9 +155,9 @@ const tableListDataSource = [{
     version: 1
   }, {
     key: 19,
-    measure: 'https://metrics.operas-eu.org/ekt/landingsession/v1',
+    measure: 'https://metrics.operas-eu.org/ekt/landingsessions/v1',
     namespace: 'https://metrics.operas-eu.org',
-    path: 'ekt/landingsession/v1',
+    path: 'ekt/landingsessions/v1',
     source: 'Εθνικό Κέντρο Τεκμηρίωσης',
     type: 'landingsessions',
     version: 1
