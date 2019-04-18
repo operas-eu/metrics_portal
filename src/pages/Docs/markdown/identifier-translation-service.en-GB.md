@@ -59,7 +59,7 @@ volumes:
   db:
 ```
 Notes:
-- The example uses the docker images already built and used by Open Book Publishers. You may use the provded docker files to build your own, instead.
+- The example uses the docker images already built and used by Open Book Publishers. You may use the provided docker files to build your own, instead.
 - You may of course use whatever port you like, and/or use a proxy server (e.g. nginx) to handle the API endpoint.
 - The `db` volume ensure the contents of the database persist when restarting/deleting the container.
 - In this example we use two sets of configuration files, one with database credentials shared with both containers, the other one with API configuration only available to the API container. You may use a single file with all environment variables.
@@ -67,7 +67,7 @@ Notes:
 ## API Structure
 
 ### Publication identifiers as URIs
-The translation service stores all work (publication) identifiers as URIs, therefore when querying/populating the database you must use the relevant [URI scheme][7]. When multiple identifiers of the same scheme are associated with the same work, you may set one and only one canonical URI per URI scheme, which will be the returned value when the `strict` flag is used.
+The translation service stores all work (publication) identifiers as URIs, therefore when querying/populating the database you must use the relevant [URI scheme][7].
 
 | Identifier | URI Scheme | Example                                       |
 | ---------- | ---------- | --------------------------------------------- |
@@ -79,6 +79,13 @@ The translation service stores all work (publication) identifiers as URIs, there
 | URL        | http       | http://www.openbookpublishers.com/product/3   |
 | URL        | https      | https://www.openbookpublishers.com/product/3  |
 
+#### The canonical flag
+When multiple identifiers of the same scheme are associated with the same work, **you may set one and only one canonical URI per URI scheme and work**, which will be the returned value when the `strict` flag is used.
+
+The `/translate` path attempts to retrieve a unique identifier of the chosen URI scheme (e.g. translating from a urn:isbn to a info:doi), if more than one identifier of the same URI scheme is found the API will complain that it is not able to translate properly. The canonical flag makes sure that in such a case the API is able to translate to the desired canonical URI of that particular scheme.
+
+A work can have at most one canonical URI of each URI scheme (e.g. one canonical URL, one canonical ISBN, one canonical DOI, etc.).
+
 ### API routes
 The following methods are allowed:
 
@@ -87,7 +94,7 @@ The following methods are allowed:
 | `GET`    | `/translate`      | Takes a `uri` as parameter and returns all identifiers associated with it. |
 | `GET`    | `/works`          | Return information about stored publications.                              |
 | `POST`   | `/works`          | Store a publication and associated URIs in the database.                   |
-| `DELETE` | `/works`          | Delete a publicatin and associated URIs from the database.                 |
+| `DELETE` | `/works`          | Delete a publication and associated URIs from the database.                |
 | `POST`   | `/titles`         | Add a new title to an existing publication.                                |
 | `DELETE` | `/titles`         | Remove a title from its publication.                                       |
 | `POST`   | `/uris`           | Add a new URI to an existing publication.                                  |
@@ -241,7 +248,7 @@ Check some more [example queries][6].
 You may write your own version of [OpenBookPublishers/obp_product_import][4] to populate the translation service with your existing data. Or you can use this script to add individual URIs to an existing publication: [OpenBookPublishers/obp_uri_import][5]
 
 ### Crosref extension
-The main purpose of this service was to store as many URIs per publication as possible, and it's unlikely that the user of this software will be aware of all of them. For this reason you may set up [hirmeos/crossref_uri_import][3] to periodically query Crossref's API with your DOIs and populate the translation service with potential new data (e.g. multiple DOIs assigned to the same publication, multiple resolution URLs).
+The main purpose of this service is to store as many URIs per publication as possible, and it's unlikely that the user of this software will be aware of all of them. For this reason you may set up [hirmeos/crossref_uri_import][3] to periodically query Crossref's API with your DOIs and populate the translation service with potential new data (e.g. multiple DOIs assigned to the same publication, multiple resolution URLs).
 
 ### OAI Extension
 Although it is expected that you will populate the database with custom code, in some cases work identifiers will be determined by third-party (e.g. URLs in a distributing platform), in which case you may configure [hirmeos/oai_uri_import][8] to populate the database via OAI.
