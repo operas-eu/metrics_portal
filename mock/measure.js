@@ -145,6 +145,22 @@ const tableListDataSource = [{
     source: 'Εθνικό Κέντρο Τεκμηρίωσης',
     type: 'downloads',
     version: 1
+  }, {
+    key: 18,
+    measure: 'https://metrics.operas-eu.org/ekt/sessions/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'ekt/sessions/v1',
+    source: 'Εθνικό Κέντρο Τεκμηρίωσης',
+    type: 'sessions',
+    version: 1
+  }, {
+    key: 19,
+    measure: 'https://metrics.operas-eu.org/ekt/landingsession/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'ekt/landingsession/v1',
+    source: 'Εθνικό Κέντρο Τεκμηρίωσης',
+    type: 'landingsessions',
+    version: 1
 }];
 
 function getMeasure(req, res, u) {

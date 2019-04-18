@@ -2,6 +2,8 @@ export default {
   'measures.clipboard': 'The measure URI has been copied to the clipboard.',
   'measures.descriptions.classics-library.sessions.v1': 'A Book Session is a group of visits made by the same user within a continuous time frame. To record these sessions at the Classics Library we use Google Analytics, and a session lasts until there are 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same book will be counted as one session. For more information on Google Analytics’ definition of a session read: <a href="https://support.google.com/analytics/answer/2731565">How a web session is defined in Analytics</a>.',
   'measures.descriptions.ekt.downloads.v1': 'Pending definition.',
+  'measures.descriptions.ekt.sessions.v1': 'A Book Session is a group of visits made by the same user within a continuous time frame. To record these sessions at EKT we use Google Analytics, and a session lasts until there are 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same book will be counted as one session. For more information on Google Analytics’ definition of a session read: <a href="https://support.google.com/analytics/answer/2731565">How a web session is defined in Analytics</a>.',
+  'measures.descriptions.ekt.landingsessions.v1': 'This measure represents the nmber of sessions recorded at the publication landing page (the publication description page).<br>A Landing Page Session is a group of visits made by the same user within a continuous time frame. To record these sessions at EKT we use Google Analytics, and a session lasts until there are 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same book landing page will be counted as one session. For more information on Google Analytics’ definition of a session read: <a href="https://support.google.com/analytics/answer/2731565">How a web session is defined in Analytics</a>.',
   'measures.descriptions.google-books.views.v1': 'Book Visits represent the total number of times a book has been accessed. This can include multiple visits by the same IP address, which are counted as separate visits. Google Books only reports back to the publisher the Book Visits and Book Page Views.',
   'measures.descriptions.irusuk.downloads.v1': 'Pending definition.',
   'measures.descriptions.jstor.downloads.v1': 'This measure represents the total number of times a chapter has been downloaded. This can include multiple downloads by the same IP address, which are counted as separate downloads.',
@@ -34,6 +36,7 @@ export default {
   'measures.type.sessions': 'Sessions',
   'measures.type.users': 'Users',
   'measures.type.views': 'Views',
+  'measures.type.landingsessions': 'Landing Page Sessions',
   'measures.version': 'Version',
   'measures.version.description': 'Data providers and/or collectors may want to modify their definition of e.g. a view or a session. In order to ensure changes in these definitions are differentiated, we use versioning.',
 };
