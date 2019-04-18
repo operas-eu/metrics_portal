@@ -19,57 +19,92 @@ import metricsApiEnGB from './markdown/metrics-api.en-GB.md';
 import countriesApiEnGB from './markdown/countries-api.en-GB.md';
 import tokensApiEnGB from './markdown/tokens-api.en-GB.md';
 
+import gettingStartedElGR from './markdown/getting-started.el-GR.md';
+import translationSrvElGR from './markdown/identifier-translation-service.el-GR.md';
+import googleAnalyticsElGR from './markdown/google-analytics.el-GR.md';
+import matomoElGR from './markdown/matomo.el-GR.md';
+import accessLogsElGR from './markdown/access-logs.el-GR.md';
+import googleBooksElGR from './markdown/google-books.el-GR.md';
+import openEditionElGR from './markdown/open-edition.el-GR.md';
+import oapenElGR from './markdown/oapen.el-GR.md';
+import jstorElGR from './markdown/jstor.el-GR.md';
+import worldReaderElGR from './markdown/world-reader.el-GR.md';
+import unglueitElGR from './markdown/unglueit.el-GR.md';
+import openaireElGR from './markdown/openaire.el-GR.md';
+import irusUkElGR from './markdown/irus-uk.el-GR.md';
+import wikiversityElGR from './markdown/wikiversity.el-GR.md';
+import metricsApiElGR from './markdown/metrics-api.el-GR.md';
+import countriesApiElGR from './markdown/countries-api.el-GR.md';
+import tokensApiElGR from './markdown/tokens-api.el-GR.md';
+
 export const files = {
   'getting-started': {
-    'en-GB': gettingStartedEnGB
+    'en-GB': gettingStartedEnGB,
+    'el-GR': gettingStartedElGR
   },
   'identifier-translation-service': {
-    'en-GB': translationSrvEnGB
+    'en-GB': translationSrvEnGB,
+    'el-GR': translationSrvElGR
   },
   'google-analytics': {
-    'en-GB': googleAnalyticsEnGB
+    'en-GB': googleAnalyticsEnGB,
+    'el-GR': googleAnalyticsElGR
   },
   'matomo': {
-    'en-GB': matomoEnGB
+    'en-GB': matomoEnGB,
+    'el-GR': matomoElGR
   },
   'access-logs': {
-    'en-GB': accessLogsEnGB
+    'en-GB': accessLogsEnGB,
+    'el-GR': accessLogsElGR
   },
   'google-books': {
-    'en-GB': googleBooksEnGB
+    'en-GB': googleBooksEnGB,
+    'el-GR': googleBooksElGR
   },
   'open-edition': {
-    'en-GB': openEditionEnGB
+    'en-GB': openEditionEnGB,
+    'el-GR': openEditionElGR
   },
   'oapen': {
-    'en-GB': oapenEnGB
+    'en-GB': oapenEnGB,
+    'el-GR': oapenElGR
   },
   'jstor': {
-    'en-GB': jstorEnGB
+    'en-GB': jstorEnGB,
+    'el-GR': jstorElGR
   },
   'world-reader': {
-    'en-GB': worldReaderEnGB
+    'en-GB': worldReaderEnGB,
+    'el-GR': worldReaderElGR
   },
   'unglueit': {
-    'en-GB': unglueitEnGB
+    'en-GB': unglueitEnGB,
+    'el-GR': unglueitElGR
   },
   'openaire': {
-    'en-GB': openaireEnGB
+    'en-GB': openaireEnGB,
+    'el-GR': openaireElGR
   },
   'irus-uk': {
-    'en-GB': irusUkEnGB
+    'en-GB': irusUkEnGB,
+    'el-GR': irusUkElGR
   },
   'wikiversity': {
-    'en-GB': wikiversityEnGB
+    'en-GB': wikiversityEnGB,
+    'el-GR': wikiversityElGR
   },
   'metrics-api': {
-    'en-GB': metricsApiEnGB
+    'en-GB': metricsApiEnGB,
+    'el-GR': metricsApiElGR
   },
   'countries-api': {
-    'en-GB': countriesApiEnGB
+    'en-GB': countriesApiEnGB,
+    'el-GR': countriesApiElGR
   },
   'tokens-api': {
-    'en-GB': tokensApiEnGB
+    'en-GB': tokensApiEnGB,
+    'el-GR': tokensApiElGR
   }
 };
 
