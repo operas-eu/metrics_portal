@@ -79,7 +79,13 @@ MODES=["measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp
 ```
 
 ## Run via crontab
+Drivers need to be executed each time you need new metrics (e.g. daily, weekly), thus they cannot be run using docker-compose. The easiest is to set up a cron job that runs the container whenever we please:
 ```
 0 0 * * 0 docker run --rm --name "google_analytics_driver" --env-file /path/to/config.env -v google_analytics_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_analytics_driver
 ```
+- `--rm` is used to delete the container once it exists;
+- `--name` is completely optional (it will get receive a random name otherwise);
+- `--env-file` is the path to the config file (in the local machine);
+- `-v` is to add a named volume (to persist data). We have two of these: google_analytics_cache will store the results of the API queries to GA; metrics stores the output of the driver (the normalised CSV files).
+
 [1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Identifier Translation Service"

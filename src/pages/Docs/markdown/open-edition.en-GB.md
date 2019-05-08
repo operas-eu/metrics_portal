@@ -82,6 +82,10 @@ NB. Unlike with other drivers, OE reports only get generated once a month, so it
 ```
 0 0 1 * * docker run --rm --name "open_edition_driver" --env-file /path/to/config.env -v open_edition_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/open_edition_driver:1
 ```
+- `--rm` is used to delete the container once it exists;
+- `--name` is completely optional (it will get receive a random name otherwise);
+- `--env-file` is the path to the config file (in the local machine);
+- `-v` is to add a named volume (to persist data). We have two of these: open_edition_cache will store the results of the API queries to GA; metrics stores the output of the driver (the normalised CSV files).
 
 [1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Identifier Translation Service"
 [2]: https://oai.openedition.org "Open Edition's OAI"
