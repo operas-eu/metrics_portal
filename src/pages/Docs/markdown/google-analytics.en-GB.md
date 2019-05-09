@@ -13,6 +13,8 @@ Identifier normalisation is performed using an instance of [hirmeos/identifier_t
 ### API Service Account Key
 Obtain the private key of a service account linked to your google analytics views: https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py
 
+The private key will be inside a json file. We must provide the path to this file using the env variable `KEY_PATH` (see "Environment variables" below). If you are running the driver using docker you will need to map the local json file to the `KEY_PATH` location in the container (see "Run via crontab" below).
+
 ### Environment variables
 The following environment variables must be set. You can find a template in `./config/config.env.example`.
 
