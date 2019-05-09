@@ -13,6 +13,8 @@ Identifier normalisation is performed using an instance of [hirmeos/identifier_t
 ### API Service Account Key
 Obtain the private key of a service account linked to your google analytics views: https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py
 
+The private key will be inside a json file. We must provide the path to this file using the env variable `KEY_PATH` (see "Environment variables" below). If you are running the driver using docker you will need to map the local json file to the `KEY_PATH` location in the container (see "Run via crontab" below).
+
 ### Environment variables
 The following environment variables must be set. You can find a template in `./config/config.env.example`.
 
@@ -36,7 +38,7 @@ The following environment variables must be set. You can find a template in `./c
 ### Example `config.env` file
 
 ```
-MODES=["measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2014-02-26","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
+MODES=[{"measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2014-02-26","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
 EXCLUDED_URLS=[]
 OUTDIR=/usr/src/app/output
 CACHEDIR=/usr/src/app/cache
@@ -75,11 +77,17 @@ Each entry of the `MODES` array must contain values for `measure`, `name`, `star
 
 Example:
 ```
-MODES=["measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2015-01-01","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
+MODES=[{"measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2015-01-01","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
 ```
 
 ## Run via crontab
+Drivers need to be executed each time you need new metrics (e.g. daily, weekly), thus they cannot be run using docker-compose. The easiest is to set up a cron job that runs the container whenever we please:
 ```
-0 0 * * 0 docker run --rm --name "google_analytics_driver" --env-file /path/to/config.env -v google_analytics_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_analytics_driver
+0 0 * * 0 docker run --rm --name "google_analytics_driver" --env-file /path/to/config.env -v google_analytics_cache:/usr/src/app/cache -v metrics:/usr/src/app/output -v /path/to/key.json:/usr/src/app/key.json openbookpublishers/google_analytics_driver
 ```
+- `--rm` is used to delete the container once it exists;
+- `--name` is completely optional (it will get receive a random name otherwise);
+- `--env-file` is the path to the config file (in the local machine);
+- `-v` is to add a volume (to persist data). We have three of these: google_analytics_cache will store the results of the API queries to GA; metrics stores the output of the driver (the normalised CSV files); and the last one (`key.json`) is a mapping of the local json file containing the API credentials, to the location in the container specified in `KEY_PATH`.
+
 [1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Identifier Translation Service"
