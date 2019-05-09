@@ -74,6 +74,10 @@ MODES=[{"measure":"https://metrics.operas-eu.org/google-books/views/v1","name":"
 ```
 0 0 * * 0 docker run --rm --name "google_books_driver" --env-file /path/to/config.env -v google_books_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_books_driver:1
 ```
+- `--rm` is used to delete the container once it exists;
+- `--name` is completely optional (it will get receive a random name otherwise);
+- `--env-file` is the path to the config file (in the local machine);
+- `-v` is to add a named volume (to persist data). We have two of these: google_books_cache will store the results of the API queries to GA; metrics stores the output of the driver (the normalised CSV files).
 
 ## Troubleshooting
 It is very important to check the output the first time the driver is run as it is very likely that Google will block the 'suspicious' login attempt. If it does, you will need to login with the same credentials you have provided the driver with and review the security settings, Google will ask if you were prevented from logging in and you must confirm so. Afterwards re-run the driver and it should work just fine.
