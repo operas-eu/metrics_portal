@@ -18,21 +18,22 @@ The private key will be inside a json file. We must provide the path to this fil
 ### Environment variables
 The following environment variables must be set. You can find a template in `./config/config.env.example`.
 
-| Variable                | Description                                                                      |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| `MODES`                 | A JSON array containing further configuration (see below).                       |
-| `EXCLUDED_URLS`         | An array of URLs that are reported on GA but should be ignored.                  |
-| `KEY_PATH`              | The path to the json file containing Google Analytics API private key.           |
-| `OUTDIR`                | The path to the directory where the driver will store its output.                |
-| `CACHEDIR`              | The path to the directory where the driver will store the raw reports.           |
-| `URI_API_ENDP`          | The URL to the translation service.                                              |
-| `AUTH_API_ENDP`         | The URL to the tokens API.                                                       |
-| `URI_API_USER`          | The email address of the user with access to the translation service.            |
-| `URI_API_PASS`          | The password of the above user.                                                  |
-| `URI_SCHEME`            | The desired URI scheme to normalise identifiers to (we recommend DOI, info:doi). |
-| `COUNTRY_URI_SCHEME`    | The URI scheme of the country coulmn ('urn:iso:std:3166:-2' for iso2).           |
-| `URI_STRICT`            | Whether to output errors with ambiguous translation queries.                     |
-| `CUTOFF_DAYS`           | The driver will get reports until today minus `CUTOFF_DAYS`.                     |
+| Variable                | Description                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------- |
+| `MODES`                 | A JSON array containing further configuration (see below).                                         |
+| `EXCLUDED_URLS`         | An array of URLs that are reported on GA but should be ignored.                                    |
+| `KEY_PATH`              | The path to the json file containing Google Analytics API private key.                             |
+| `OUTDIR`                | The path to the directory where the driver will store its output.                                  |
+| `CACHEDIR`              | The path to the directory where the driver will store the raw reports.                             |
+| `URI_API_ENDP`          | The URL to the translation service.                                                                |
+| `API_DEBUG`             | Whether to use JWT to authenticate to the translation service (true/false).                        |
+| `AUTH_API_ENDP`         | The URL to the tokens API. Optional if `API_DEBUG=false`                                           |
+| `URI_API_USER`          | The email address of the user with access to the translation service. Optional if `API_DEBUG=false`|
+| `URI_API_PASS`          | The password of the above user. Optional if `API_DEBUG=false`                                      |
+| `URI_SCHEME`            | The desired URI scheme to normalise identifiers to (we recommend DOI, info:doi).                   |
+| `COUNTRY_URI_SCHEME`    | The URI scheme of the country coulmn ('urn:iso:std:3166:-2' for iso2).                             |
+| `URI_STRICT`            | Whether to output errors with ambiguous translation queries.                                       |
+| `CUTOFF_DAYS`           | The driver will get reports until today minus `CUTOFF_DAYS`.                                       |
 
 
 ### Example `config.env` file
