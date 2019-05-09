@@ -36,7 +36,7 @@ The following environment variables must be set. You can find a template in `./c
 ### Example `config.env` file
 
 ```
-MODES=["measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2014-02-26","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
+MODES=[{"measure":"https://metrics.operas-eu.org/obp-pdf/sessions/v1","name":"obp-htmlreader","prefix":"https://www.openbookpublishers.com/htmlreader","startDate":"2014-02-26","config":[{"name":"view-id","value":"012345678"},{"name":"metric","value":"ga:uniquePageViews"},{"name":"dimension","value":"ga:pagePathLevel2"},{"name":"dimension","value":"ga:countryIsoCode"},{"name":"filter","value":"^/htmlreader/"}],"regex":["https:\\/\\/www\\.openbookpublishers\\.com\\/htmlreader\\/(?:[0-9]{3}-)?[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,6}-[0-9]"]}]
 EXCLUDED_URLS=[]
 OUTDIR=/usr/src/app/output
 CACHEDIR=/usr/src/app/cache
