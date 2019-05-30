@@ -153,6 +153,13 @@ export const menu = [
   },
   {
     'name': <FormattedMessage
+      id="menu.countriesapi"
+      defaultMessage="Countries API"
+    />,
+    'path': paths['countries-api']
+  },
+  {
+    'name': <FormattedMessage
       id="menu.googlebooks"
       defaultMessage="Google Books Driver"
     />,
