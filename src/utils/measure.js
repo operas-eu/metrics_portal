@@ -153,6 +153,38 @@ const tableListDataSource = [{
     source: 'Εθνικό Κέντρο Τεκμηρίωσης',
     type: 'landingsessions',
     version: 1
+  }, {
+    key: 20,
+    measure: 'https://metrics.operas-eu.org/twitter/tweets/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'twitter/tweets/v1',
+    source: 'Twitter',
+    type: 'tweets',
+    version: 1
+  }, {
+    key: 21,
+    measure: 'https://metrics.operas-eu.org/hypothesis/annotations/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'hypothesis/annotations/v1',
+    source: 'Hypothes.is',
+    type: 'annotations',
+    version: 1
+  }, {
+    key: 22,
+    measure: 'https://metrics.operas-eu.org/wikipedia/references/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'wikipedia/references/v1',
+    source: 'Wikipedia',
+    type: 'references',
+    version: 1
+  }, {
+    key: 23,
+    measure: 'https://metrics.operas-eu.org/wordpress/references/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'wordpress/references/v1',
+    source: 'Wordpress',
+    type: 'references',
+    version: 1
 }];
 
 function getMeasure(u) {
