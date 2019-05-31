@@ -51,8 +51,8 @@ Once data is collected and normalised it can be stored in the [metrics database,
 You may find more information, including slides, [here][15].
 
 You may also get in touch with our technical team:
-- Usage metrics: <a href="mailto:javi@openbookpublishers.com">Javier Arias</a> (Open Book Publishers)
-- Altmetrics: <a href="mailto:rowan.hatherley@ubiquitypress.com">Rowan Hatherley</a> (Ubiquity Press)
+- Usage metrics: [Javier Arias][20] (Open Book Publishers)
+- Altmetrics: [Rowan Hatherley][21] (Ubiquity Press)
 
 [1]: https://www.hirmeos.eu "HIRMEOS"
 [2]: https://www.openbookpublishers.com "Open Book Publishers"
@@ -73,3 +73,5 @@ You may also get in touch with our technical team:
 [17]: https://metrics.operas-eu.org/docs/metrics-api "Metrics API"
 [18]: https://metrics.operas-eu.org/docs/countries-api "Countries API"
 [19]: https://metrics.operas-eu.org/docs/tokens-api "Tokens API"
+[20]: mailto:javi@openbookpublishers.com "Javier Arias email address"
+[21]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
