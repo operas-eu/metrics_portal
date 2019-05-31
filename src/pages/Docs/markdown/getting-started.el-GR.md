@@ -48,8 +48,11 @@ A rather simplified schema of a driver would look like this:
 Once data is collected and normalised it can be stored in the [metrics database, via its REST API][17].
 
 ## More
-You may find more information, including slides, [here][15]
+You may find more information, including slides, [here][15].
 
+You may also get in touch with our technical team:
+- Usage metrics: <a href="mailto:javi@openbookpublishers.com">Javier Arias</a> (Open Book Publishers)
+- Altmetrics: <a href="mailto:rowan.hatherley@ubiquitypress.com">Rowan Hatherley</a> (Ubiquity Press)
 
 [1]: https://www.hirmeos.eu "HIRMEOS"
 [2]: https://www.openbookpublishers.com "Open Book Publishers"
