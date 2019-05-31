@@ -42,14 +42,6 @@ const tableListDataSource = [{
     type: 'users',
     version: 1
   }, {
-    key: 5,
-    measure: 'https://metrics.operas-eu.org/world-reader/pageviews/v1',
-    namespace: 'https://metrics.operas-eu.org',
-    path: 'world-reader/pageviews/v1',
-    source: 'World Reader',
-    type: 'pageviews',
-    version: 1
-  }, {
     key: 6,
     measure: 'https://metrics.operas-eu.org/open-edition/views/v1',
     namespace: 'https://metrics.operas-eu.org',
