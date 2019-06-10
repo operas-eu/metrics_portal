@@ -34,6 +34,7 @@ The following environment variables must be set. You can find a template in `./c
 | `COUNTRY_URI_SCHEME`    | The URI scheme of the country coulmn ('urn:iso:std:3166:-2' for iso2).                             |
 | `URI_STRICT`            | Whether to output errors with ambiguous translation queries.                                       |
 | `CUTOFF_DAYS`           | The driver will get reports until today minus `CUTOFF_DAYS`.                                       |
+| `REDO_OUTPUT`           | Reprocess output regardless of whether it already exists. Useful if new entries have been added.   |
 
 
 ### Example `config.env` file
@@ -52,6 +53,7 @@ URI_SCHEME=info:doi
 COUNTRY_URI_SCHEME=urn:iso:std:3166:-2
 URI_STRICT=false
 CUTOFF_DAYS=1
+REDO_OUTPUT=false
 ```
 
 
