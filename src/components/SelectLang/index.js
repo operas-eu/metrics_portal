@@ -15,6 +15,7 @@ export default class SelectLang extends PureComponent {
       'en-GB',
       'es-ES',
       'el-GR',
+      'de-DE',
 //      'fr-FR',
 //      'de-DE',
 //      'it-IT',
@@ -24,8 +25,8 @@ export default class SelectLang extends PureComponent {
       'en-GB': 'English',
       'es-ES': 'Español',
       'el-GR': 'Ελληνικά',
+      'de-DE': 'Deutsch',
 //      'fr-FR': 'Français',
-//      'de-DE': 'Deutsche',
 //      'it-IT': 'Italiano',
 //      'nl-NL': 'Nederlands'
     };
@@ -33,8 +34,8 @@ export default class SelectLang extends PureComponent {
       'en-GB': '🇬🇧',
       'es-ES': '🇪🇸',
       'el-GR': '🇬🇷',
+      'de-DE': '🇩🇪 ',
 //      'fr-FR': '🇫🇷',
-//      'de-DE': '🇩🇪',
 //      'it-IT': '🇮🇹',
 //      'nl-NL': '🇳🇱'
     };
