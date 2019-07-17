@@ -72,6 +72,7 @@ export default {
     javascriptEnabled: true,
   },
   disableRedirectHoist: true,
+  hash: true,
   cssLoaderOptions: {
     modules: true,
     getLocalIdent: (context, localIdentName, localName) => {
