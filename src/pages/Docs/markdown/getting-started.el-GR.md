@@ -5,7 +5,7 @@ Usage metrics have been widely adopted in Open Access works as an indication of 
 
 Thanks to their licenses, Open Access publications are disseminated across multiple platforms and repositories. However, publishers and distributing platforms simply collect usage data from their own system, due to the lack of public APIs that could allow programmatic collection of data from all the various websites hosting a publication. Most usage metrics available within distributing platforms display data for that particular website, not for the publication.
 
-As part of OPERAS the [HIRMEOS project][1] [Open Book Publishers][2] has developed open source software to allow collection and normalisation of third-party usage metrics, used to populate a database of title-specific data that allows its analysis and visualisation.
+As part of Work Package 6 the [HIRMEOS project][1] [Open Book Publishers][2] has developed open source software to allow collection and normalisation of third-party usage metrics, used to populate a database of title-specific data that allows its analysis and visualisation.
 
 ## Components
 The HIRMEOS metrics suite is made of:
