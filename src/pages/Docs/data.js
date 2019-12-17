@@ -146,6 +146,13 @@ export const menu = [
   },
   {
     'name': <FormattedMessage
+      id="menu.metricsapi"
+      defaultMessage="Metrics API"
+    />,
+    'path': paths['metrics-api']
+  },
+  {
+    'name': <FormattedMessage
       id="menu.tokensapi"
       defaultMessage="Tokens API"
     />,
@@ -187,4 +194,3 @@ export const menu = [
     'path': paths['open-edition']
   }
 ];
-
