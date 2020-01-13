@@ -34,6 +34,12 @@ export default [
         ]
       },
       {
+        path: '/privacy-policy',
+        name: 'privacy policy',
+        component: './Privacy/PrivacyPolicy',
+        hideInMenu: true
+      },
+      {
         path: '/exception',
         hideChildrenInMenu: true,
         hideInMenu: true,

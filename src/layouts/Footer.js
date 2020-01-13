@@ -34,6 +34,7 @@ const FooterView = () => (
             Creative Commons Attribution 4.0 International License
           </a>
           .
+          <br /> <a href="/privacy-policy">Privacy policy</a>
         </Fragment>
       }
     />
