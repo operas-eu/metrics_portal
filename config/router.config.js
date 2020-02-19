@@ -24,6 +24,12 @@ export default [
         component: './Principles/Principles',
       },
       {
+        path: '/acceptable-use-policy',
+        name: 'acceptable use policy',
+        component: './Use/AcceptableUsePolicy',
+        hideInMenu: true
+      },
+      {
         path: '/docs',
         name: 'documentation',
         icon: 'read',
