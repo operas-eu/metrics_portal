@@ -30,4 +30,12 @@ export default {
   'app.use.policy.email.security': "The security contact for this AUP is: technical-support_at_operas.eu-org",
   'app.use.policy.privacy.stmt': "The privacy statements are located at: <a href='/privacy-policy'>https://metrics.operas-eu.org/privacy-policy</a>",
   'app.use.policy.based.on': "This AUP is based on '<a target='_blank' href='https://aarc-project.eu/wp-content/uploads/2019/03/AARC-I044-Implementers-Guide-to-the-WISE-Baseline-AUP.pdf'>AARC-I044: Implementers Guide to the WISE Baseline Acceptable Use Policy</a>'"
+  'app.privacy.notice.privacy.title': 'Privacy Policy',
+  'app.privacy.notice.privacy.text': 'This privacy statement describes how OPERAS Metrics Service collects and uses data while browsing this website or using our API. We are committed to ensuring that your personal details are protected when you use our website, or API. If you have any questions about how we use your personal information or comply with data protection legislation, please <a href="https://operas.hypotheses.org/contact" target="_blank">contact us</a>.',
+  'app.privacy.notice.collect.title': 'What information do we collect?',
+  'app.privacy.notice.collect.text': 'We use <a href="https://matomo.org/" target="_blank">Matomo</a> which is an open source analytics program that respects user privacy. We look and might analyse page views, referrers, geographies, or exit pages. Matomo does not hold onto your data.',
+  'app.privacy.notice.use.title': 'How do we use this information?',
+  'app.privacy.notice.use.text': 'The information retrieved by Matomo only helps in improving the website, or getting very generic usage data.',
+  'app.privacy.notice.share.title': 'Will OPERAS Metrics Service share your personal details with anyone else?',
+  'app.privacy.notice.share.text': 'We will not sell, distribute or lease your personal information to third parties unless disclosure is required by law. If you feel that this site is not following its stated privacy policy, you may <a href="https://operas.hypotheses.org/contact" target="_blank">contact us</a>. We will be sure to address your concerns.'
 };
