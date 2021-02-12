@@ -185,6 +185,54 @@ const tableListDataSource = [{
     source: 'Wordpress',
     type: 'references',
     version: 1
+  }, {
+    key: 24,
+    measure: 'https://metrics.operas-eu.org/up-logs/sessions/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-logs/sessions/v1',
+    source: 'Ubiquity Press',
+    type: 'sessions',
+    version: 1
+  }, {
+    key: 25,
+    measure: 'https://metrics.operas-eu.org/up-ga/sessions/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-ga/sessions/v1',
+    source: 'Ubiquity Press',
+    type: 'sessions',
+    version: 1
+  }, {
+    key: 26,
+    measure: 'https://metrics.operas-eu.org/up-logs/downloads/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-logs/downloads/v1',
+    source: 'Ubiquity Press',
+    type: 'downloads',
+    version: 1
+  }, {
+    key: 27,
+    measure: 'https://metrics.operas-eu.org/up-ga/downloads/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-ga/downloads/v1',
+    source: 'Ubiquity Press',
+    type: 'downloads',
+    version: 1
+  }, {
+    key: 28,
+    measure: 'https://metrics.operas-eu.org/up-logs/reads/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-logs/reads/v1',
+    source: 'Ubiquity Press',
+    type: 'reads',
+    version: 1
+  }, {
+    key: 29,
+    measure: 'https://metrics.operas-eu.org/up-ga/reads/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'up-ga/reads/v1',
+    source: 'Ubiquity Press',
+    type: 'reads',
+    version: 1
 }];
 
 function getMeasure(req, res, u) {
