@@ -49,7 +49,7 @@ export default {
   'measures.type.tweets': 'Tweets',
   'measures.type.users': 'Users',
   'measures.type.views': 'Views',
-  'measuers.type.reads': 'Reads',
+  'measures.type.reads': 'Reads',
   'measures.version': 'Version',
   'measures.version.description': 'Data providers and/or collectors may want to modify their definition of e.g. a view or a session. In order to ensure changes in these definitions are differentiated, we use versioning.',
 };
