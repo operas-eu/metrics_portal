@@ -22,6 +22,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: openbookpublishers/metrics_portal:latest
+          tags: |
+            openbookpublishers/metrics_portal:latest
+            openbookpublishers/metrics_portal:${{ github.event.release.tag_name }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
