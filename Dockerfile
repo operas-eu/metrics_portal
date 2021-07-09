@@ -2,8 +2,8 @@ FROM node:latest AS build
 
 WORKDIR /usr/src/app/
 
-COPY package.json ./
-RUN npm install --silent --no-cache
+COPY package.json package-lock.json ./
+RUN npm install --quiet --no-cache
 
 COPY ./ ./
 
