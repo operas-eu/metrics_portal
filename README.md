@@ -1,5 +1,5 @@
 # OPERAS Metrics Website
-[![Build Status](https://travis-ci.org/hirmeos/metrics_portal.svg?branch=master)](https://travis-ci.org/hirmeos/metrics_portal) [![Dependencies](https://img.shields.io/david/hirmeos/metrics_portal.svg)](https://david-dm.org/hirmeos/metrics_portal) [![DevDependencies](https://img.shields.io/david/dev/hirmeos/metrics_portal.svg)](https://david-dm.org/hirmeos/metrics_portal?type=dev)
+[![Build Status](https://img.shields.io/github/workflow/status/hirmeos/metrics_portal/build-and-lint/master)](https://github.com/hirmeos/metrics_portal/actions) [![Dependencies](https://img.shields.io/david/hirmeos/metrics_portal.svg)](https://david-dm.org/hirmeos/metrics_portal) [![DevDependencies](https://img.shields.io/david/dev/hirmeos/metrics_portal.svg)](https://david-dm.org/hirmeos/metrics_portal?type=dev)
 
 ## Usage
 First we need to define the URLs of the APIs in `var.env`; a template can be found in `var.env.example`.
