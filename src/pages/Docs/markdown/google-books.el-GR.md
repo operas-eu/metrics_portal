@@ -1,91 +1,33 @@
 # Google Books Driver
-- **Source**: https://github.com/hirmeos/google_books_driver
-- **Image**: https://hub.docker.com/r/openbookpublishers/google_books_driver
 
-This driver allows programmatic retrieval and normalisation of Google Books usage reports.
+Install the driver as a package from PyPI by visiting the following link on [pypi][1]. 
 
-The driver is made of two modules: the first one scrapes usage reports from Google Books and stores them in a directory (`CACHEDIR`); the second reads from cache, normalises the reports, and outputs to a different directory (`OUTDIR`). We recommend running this driver in a docker container and mapping both `CACHEDIR` and `OUTDIR` to persistent volumes.
+This driver loads csv reports from google books. It can either download a CSV report from google books and return a string of its content.
 
-## Setup
-### Requirements
-Identifier normalisation is performed using an instance of [hirmeos/identifier_translation_service][1] - you must first setup this API.
+The first option is web scraping using Selenium. You need a google account which has to be a dedicated account that only has access to google play books, and a second google account as recovery is needed. And 2FA also needs to be disabled to make sure the web scraping is successful. We recommended you double check the output, since there have been issues with the google API, when running the driver.
 
-### Credentials
-Google does not provide an API to retrieve Google Books traffic reports, therefore we cannot use OAuth tokens for authentication. This driver runs selenium to login to Google using plain credentials (i.e. a Google account email and password) and obtain the traffic report.
 
-We recommend creating a Google account specifically for this purpose, instead of using existing personal credentials. Needless to say that this account must be granted access to the publisher's Google Play Books page.
+### Plugin Variables Description
 
-### Environment variables
-The following environment variables must be set. You can find a template in `./config/config.env.example`.
+| Variable                | Description                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------- |
+| `active`                | The plugin will not run if this is set to false, boolean.                                          |
+| `start_date`            | the date that you want to first pull results the first time the plugin runs, a string.             |
+| `uri_scheme`            | Uri scheme to save results against, string.                                                        |
+| `gb_account`            | Google books account id. Numeric representation of the account, used to download the google books files, string.                                                                           |
+| `user_agent`            | Used by selenium to initialise the configuration, string.                                          |
+| `username`              | username for the google books account, string.                                                     |
+| `password`              | password for the google books account, string.                                                     | 
 
-| Variable        | Description                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| `MODES`         | A JSON array containing further configuration (see below).                                       |
-| `WORK_TYPES`    | All the pertinent work types to query in the translation service.                                |
-| `USER_AGENT`    | The user agent to use with phantomjs.                                                            |
-| `GOOGLE_USER`   | The email address of a google account with access to the reports.                                |
-| `GOOGLE_PASS`   | The password for the above google account.                                                       |
-| `OUTDIR`        | The path to the directory where the driver will store its output.                                |
-| `CACHEDIR`      | The path to the directory where the driver will store the raw reports.                           |
-| `URI_API_ENDP`  | The URL to the translation service.                                                              |
-| `AUTH_API_ENDP` | The URL to the tokens API.                                                                       |
-| `URI_API_USER`  | The email address of the user with access to the translation service.                            |
-| `URI_API_PASS`  | The password of the above user.                                                                  |
-| `URI_SCHEME`    | The desired URI scheme to normalise identifiers to (we recommend DOI, info:doi).                 |
-| `URI_STRICT`    | Whether to output errors with ambiguous translation queries.                                     |
-| `CUTOFF_DAYS`   | The driver will get reports until today minus `CUTOFF_DAYS`.                                     |
-| `REDO_OUTPUT`   | Reprocess output regardless of whether it already exists. Useful if new entries have been added. |
+### Example of plugin configuration file:
 
-### Example `config.env` file
+```yaml
+Gb_account - "123456789"
+User_agent - "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2 Firefox/25.0"
+username: ""
+password: ""
+uri_scheme: "info:doi"
+start_date: "2023-01-01"
+active: false
 ```
-MODES=[{"measure":"https://metrics.operas-eu.org/google-books/views/v1","name":"google-books","startDate":"2010-01-01","config": [{"name":"account","value":"0123456789012345678"}]}]
-USER_AGENT="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0"
-WORK_TYPES=["book","book-series","book-set","dissertation","edited-book","journal","journal-issue","journal-volume","monograph","posted-content","proceedings","reference-book","report","report-series","standard","standard-series"]
-GOOGLE_USER=agoogleaccount@gmail.com
-GOOGLE_PASS=a_secret_google_password
-OUTDIR=/usr/src/app/output
-CACHEDIR=/usr/src/app/cache
-URI_API_ENDP=https://identifier.translation.service/translate
-AUTH_API_ENDP=https://authentication.service/tokens
-URI_API_USER=admin_user@openbookpublishers.com
-URI_API_PASS=some_secret_password
-URI_SCHEME=info:doi
-URI_STRICT=false
-CUTOFF_DAYS=1
-```
-
-### The `MODES` env variable
-You must define a JSON array in`MODES`, with at least one record. The driver will iterate through the array, performing its task once per mode; in a typical case there will only be one entry in the array, however this configuration allows one single driver to query reports from multiple google books accounts.
-
-Each entry of the `MODES` array must contain values for `measure`, `name`, `startDate`, and `config`.
-
-| Attribute   | Description                                                                                                     |
-| ----------- | --------------------------------------------------------------------------------------------------------------- |
-| `measure`   | A URI identifying the type of measure. You may use https://metrics.operas-eu.org/google-books/views/v1          |
-| `name`      | The name of this mode. This is not too important, though it is used as the prefix of cache and output files.    |
-| `startDate` | The first date in which your account has usage data available in Google Books (YYYY-MM-DD format)               |
-| `config`    | An array containing one single object containing the unique ID of your Google Books account (see example below) |
-
-Example:
-```
-MODES=[{"measure":"https://metrics.operas-eu.org/google-books/views/v1","name":"google-books","startDate":"2010-01-01","config":[{"name":"account","value":"0123456789012345678"}]}]
-```
-
-## Run via crontab
-```
-0 0 * * 0 docker run --rm --name "google_books_driver" --env-file /path/to/config.env -v google_books_cache:/usr/src/app/cache -v metrics:/usr/src/app/output openbookpublishers/google_books_driver:1
-```
-- `--rm` is used to delete the container once it exists;
-- `--name` is completely optional (it will get receive a random name otherwise);
-- `--env-file` is the path to the config file (in the local machine);
-- `-v` is to add a named volume (to persist data). We have two of these: google_books_cache will store the results of the API queries to GA; metrics stores the output of the driver (the normalised CSV files).
-
-## Troubleshooting
-It is very important to check the output the first time the driver is run as it is very likely that Google will block the 'suspicious' login attempt. If it does, you will need to login with the same credentials you have provided the driver with and review the security settings, Google will ask if you were prevented from logging in and you must confirm so. Afterwards re-run the driver and it should work just fine.
-
-The error "Failed to retrieve report x-y. This is likely to be caused by an authentication issue" will be printed to standard error whenever the driver is not a
-ble to fetch a report. In most cases this simply means that the scraper did not manage to singin properly for that particular report, and a second iteration of the driver will solve the issue. However, if the error persists for the whole da
-te range it is worth checking that Google is not blocking the signin attempt; ot
-herwise you may simply ignore the error as it will eventually fix itself.
-
-[1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Identifier Translation Service"
+[1]: https://pypi.org/project/hirmeos-google-books/ "Pypi link"
