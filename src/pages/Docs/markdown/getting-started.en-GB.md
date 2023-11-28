@@ -11,17 +11,23 @@ As part of Work Package 6 of the [HIRMEOS project][1] [Open Book Publishers][2] 
 
 ## Components
 The HIRMEOS metrics suite is made of:
+
+- [Metrics-drivers-wrapper][22]. Repository where all drivers, plugins and config are found.
 - [Identifier Translation Service][16]. Used to normalise identifiers.
 The Identifier Translation Service is a JSON REST API to a database of publication URIs. The translation service maps works (publications) to URIs (e.g. info:doi:10.11647/obp.0001, urn:isbn:9781906924010, https://www.openbookpublishers.com/product/3) to allow converting from one identifier to another.
 - Drivers. Used to collect and normalise data from reporting platforms.
 - [Tokens API][19]. Used to generate JSON Web Tokens to authenticate all the various services.
-- [Metrics-drivers-wrapper][22]. Repository where all drivers, plugins and config are found.
 - [Centrally-managed OPERAS Metrics][17]. This is the final step that involves combining the data gathered by drivers and plugins with the altmetrics retrieved from sources like Crossref Relationships API which is a separate service combining results from (hypothes.is, Wikipedia, Wordpress, etc.).
 - [Countries API][18]. Used by some drivers to normalise geographical data.
 
+- See the diagram bellow for a simplified version, for more details visit the link in the next section:
+
+- ![Simplified Diagram](/simplified-diagram.png)
+
 ## System architecture and diagram
 Please refer to the following link to view the diagram architecture:
-[System diagram][23]
+
+- [System diagram][23]
 
 ## System requirements
 
@@ -40,12 +46,6 @@ This system is divided into different sections. Firstly, there are the drivers, 
 Next, we have the plugins, which are responsible for processing this data. Normally, each plugin corresponds to a driver, with the exception of 'JSTOR' and 'Access Logs,' which fetch the data individually. 'JSTOR' processes a user's CSV file, and 'Access Logs' performs a call to Google Cloud without any driver intervention. Subsequently, the metrics are saved to the database.
 
 Last but not least, we have a second database that combines the metrics fetched by the drivers and plugins mentioned above, along with the altmetrics obtained from sites such as 'hypothes.is' and 'Wikipedia’, among others. Finally, these combined metrics are sent to the frontend for display in a widget..
-
-A rather simplified schema of a driver would look like this:
-
-<SIMPLIFIED DIAGRAM>
-
-<!-- ![HIRMEOS Metrics Service Driver Diagram](https://www.openbookpublishers.com/shopimages/driver-process.png) -->
 
 
 ## More
