@@ -1,2 +1,0 @@
-# Wikiversity Driver
-Pending documentation
