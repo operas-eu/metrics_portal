@@ -1,2 +1,0 @@
-# OAPEN Driver
-Pending documentation
