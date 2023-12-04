@@ -22,7 +22,7 @@ The HIRMEOS metrics suite is made of:
 
 See the diagram bellow for an overview of the different components and their interactions:
 
-- ![Simplified Diagram](OPERAS-general.png)
+- ![Simplified Diagram](../../images/OPERAS-general.png)
 
 ## System requirements
 
