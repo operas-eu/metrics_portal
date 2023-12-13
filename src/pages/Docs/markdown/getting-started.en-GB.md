@@ -9,6 +9,10 @@ The software is designed to collect metrics from various sources and is divided 
 
 As part of Work Package 6 of the [HIRMEOS project][1] [Ubiquity Press][25] and [Open Book Publishers][2] has developed open source software to allow collection and normalisation of third-party usage metrics, used to populate a database of title-specific data that allows its analysis and visualisation.
 
+## Simplified diagram
+
+![Simplified Diagram](/images/simplified-diagram.png)
+
 ## Components
 The HIRMEOS metrics suite is made of:
 
@@ -17,12 +21,6 @@ The HIRMEOS metrics suite is made of:
 - Drivers. Used to collect and normalize data from reporting platforms.
 - [Tokens API][19]. Used to generate JSON Web Tokens to authenticate all the various services.
 - [Countries API][18]. Used by some drivers to normalize geographical data.
-
-## System architecture and diagram
-
-See the diagram bellow for an overview of the different components and their interactions:
-
-- ![Simplified Diagram](../../images/OPERAS-general.png)
 
 ## System requirements
 
@@ -39,6 +37,12 @@ Next, we have the plugins, which are responsible for processing this data. Norma
 
 Last but not least, we have a second database that combines the metrics fetched by the drivers and plugins mentioned above, along with the altmetrics obtained from sites such as 'hypothes.is' and 'Wikipedia’, among others. Finally, these combined metrics are sent to the frontend for display in a widget..
 
+
+## System architecture and diagram
+
+See the diagram bellow for an overview of the different components and their interactions:
+
+![Full Diagram](/images/OPERAS-general.png)
 
 ## More
 You may find more information, including slides, [here][15].
