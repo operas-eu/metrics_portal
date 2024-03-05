@@ -17,7 +17,7 @@ const menuColResponsiveProps = {
   sm: 24,
   md: 8,
   lg: 8,
-  xl: 6,
+  xl: 6
 };
 
 const textColResponsiveProps = {
@@ -25,20 +25,20 @@ const textColResponsiveProps = {
   sm: 24,
   md: 16,
   lg: 16,
-  xl: 18,
+  xl: 18
 };
 
 class Docs extends PureComponent {
   constructor(props) {
-    super(props)
-    this.state = { pathname: null }
+    super(props);
+    this.state = { pathname: null };
   }
 
   componentWillMount() {
     const { pathname } = window.location;
     const path = pathname.replace('/docs/', '');
     const selectedLang = getLocale();
-    let fileName = "";
+    let fileName = '';
     if (path in files) {
       if (selectedLang in files[path]) {
         fileName = files[path][selectedLang];
@@ -48,7 +48,7 @@ class Docs extends PureComponent {
       fetch(fileName)
         .then(response => response.text())
         .then(text => {
-          this.setState({ markdown: text, pathname })
+          this.setState({ markdown: text, pathname });
         });
     } else {
       router.push('/exception/404');
@@ -65,8 +65,11 @@ class Docs extends PureComponent {
               <ul className={styles.menucontainer}>
                 {menu.map(entry => (
                   <li
-                    className={pathname === entry.path
-                                 ? styles.itemselected : styles.menuitem}
+                    className={
+                      pathname === entry.path
+                        ? styles.itemselected
+                        : styles.menuitem
+                    }
                     key={entry.path}
                   >
                     <a href={entry.path}>{entry.name}</a>
@@ -75,10 +78,7 @@ class Docs extends PureComponent {
               </ul>
             </Col>
             <Col {...textColResponsiveProps}>
-              <ReactMarkdown
-                className={styles.markdown}
-                source={markdown}
-              />
+              <ReactMarkdown className={styles.markdown} source={markdown} />
             </Col>
           </Row>
         </Card>

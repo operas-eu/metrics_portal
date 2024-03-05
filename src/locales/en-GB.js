@@ -5,5 +5,5 @@ import measures from './en-GB/measures';
 export default {
   ...app,
   ...menu,
-  ...measures,
+  ...measures
 };

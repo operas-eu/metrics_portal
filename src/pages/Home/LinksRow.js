@@ -30,7 +30,11 @@ const LinksRow = () => (
           title={<FormattedMessage id="menu.quickstart" />}
           icon={<Icon type="read" theme="filled" />}
           content={<FormattedMessage id="app.home.quickstart" />}
-          action={<Button><FormattedMessage id="app.home.quickstart.btn" /></Button>}
+          action={
+            <Button>
+              <FormattedMessage id="app.home.quickstart.btn" />
+            </Button>
+          }
           route="/docs/getting-started"
           contentHeight={122}
         />
@@ -43,7 +47,11 @@ const LinksRow = () => (
           title={<FormattedMessage id="menu.measures" />}
           icon={<Icon type="area-chart" />}
           content={<FormattedMessage id="app.home.measures" />}
-          action={<Button><FormattedMessage id="app.home.measures.btn" /></Button>}
+          action={
+            <Button>
+              <FormattedMessage id="app.home.measures.btn" />
+            </Button>
+          }
           route="/measures"
           contentHeight={122}
         />
@@ -54,7 +62,11 @@ const LinksRow = () => (
           title={<FormattedMessage id="menu.principles" />}
           icon={<Icon type="heart" theme="filled" />}
           content={<FormattedMessage id="app.home.principles" />}
-          action={<Button><FormattedMessage id="app.home.principles.btn" /></Button>}
+          action={
+            <Button>
+              <FormattedMessage id="app.home.principles.btn" />
+            </Button>
+          }
           route="/principles"
           contentHeight={122}
         />
