@@ -56,7 +56,7 @@ export const files = {
     'en-GB': googleAnalyticsEnGB,
     'el-GR': googleAnalyticsElGR
   },
-  'matomo': {
+  matomo: {
     'en-GB': matomoEnGB,
     'el-GR': matomoElGR
   },
@@ -72,15 +72,15 @@ export const files = {
     'en-GB': googleBooksEnGB,
     'el-GR': googleBooksElGR
   },
-  'jstor': {
+  jstor: {
     'en-GB': jstorEnGB,
     'el-GR': jstorElGR
   },
-  'serverAccess': {
+  serverAccess: {
     'en-GB': serverAccessEnGB,
     'el-GR': serverAccessElGR
   },
-  'unglueit': {
+  unglueit: {
     'en-GB': unglueitEnGB,
     'el-GR': unglueitElGR
   },
@@ -100,15 +100,15 @@ export const files = {
     'en-GB': tokensApiEnGB,
     'el-GR': tokensApiElGR
   },
-  'annotation': {
+  annotation: {
     'en-GB': annotationEnGB,
     'el-GR': annotationElGR
   },
-  'altmetrics': {
+  altmetrics: {
     'en-GB': altmetricsEnGB,
     'el-GR': altmetricsElGR
   },
-  'widget': {
+  widget: {
     'en-GB': widgetEnGB,
     'el-GR': widgetElGR
   }
@@ -119,143 +119,134 @@ export const paths = {
   'metrics-drivers-wrapper': '/docs/metrics-drivers-wrapper',
   'identifier-translation-service': '/docs/identifier-translation-service',
   'google-analytics': '/docs/google-analytics',
-  'matomo': '/docs/matomo',
+  matomo: '/docs/matomo',
   'access-logs-local': '/docs/access-logs-local',
   'crossref-citedby': '/docs/crossref-citedby',
   'google-books': '/docs/google-books',
-  'jstor': '/docs/jstor',
-  'serverAccess': '/docs/serverAccess',
-  'unglueit': '/docs/unglueit',
+  jstor: '/docs/jstor',
+  serverAccess: '/docs/serverAccess',
+  unglueit: '/docs/unglueit',
   'irus-uk': '/docs/irus-uk',
   'metrics-api': '/docs/metrics-api',
   'countries-api': '/docs/countries-api',
   'tokens-api': '/docs/tokens-api',
-  'annotation': '/docs/annotation',
-  'altmetrics': '/docs/altmetrics',
-  'widget': '/docs/widget'
+  annotation: '/docs/annotation',
+  altmetrics: '/docs/altmetrics',
+  widget: '/docs/widget'
 };
 
 /* eslint-disable dot-notation */
 export const menu = [
   {
-    'name': <FormattedMessage
-      id="menu.quickstart"
-      defaultMessage="Getting Started"
-    />,
-    'path': paths['getting-started']
+    name: (
+      <FormattedMessage id="menu.quickstart" defaultMessage="Getting Started" />
+    ),
+    path: paths['getting-started']
   },
   {
-    'name': <FormattedMessage
-      id="menu.metrics-drivers"
-      defaultMessage="Metrics Drivers Wrapper"
-    />,
-    'path': paths['metrics-drivers-wrapper']
+    name: (
+      <FormattedMessage
+        id="menu.metrics-drivers"
+        defaultMessage="Metrics Drivers Wrapper"
+      />
+    ),
+    path: paths['metrics-drivers-wrapper']
   },
   {
-    'name': <FormattedMessage
-      id="menu.translationsrv"
-      defaultMessage="Identifier Translation Service"
-    />,
-    'path': paths['identifier-translation-service']
+    name: (
+      <FormattedMessage
+        id="menu.translationsrv"
+        defaultMessage="Identifier Translation Service"
+      />
+    ),
+    path: paths['identifier-translation-service']
   },
   {
-    'name': <FormattedMessage
-      id="menu.metricsapi"
-      defaultMessage="Metrics API"
-    />,
-    'path': paths['metrics-api']
+    name: (
+      <FormattedMessage id="menu.metricsapi" defaultMessage="Metrics API" />
+    ),
+    path: paths['metrics-api']
   },
   {
-    'name': <FormattedMessage
-      id="menu.tokensapi"
-      defaultMessage="Tokens API"
-    />,
-    'path': paths['tokens-api']
+    name: <FormattedMessage id="menu.tokensapi" defaultMessage="Tokens API" />,
+    path: paths['tokens-api']
   },
   {
-    'name': <FormattedMessage
-      id="menu.countriesapi"
-      defaultMessage="Countries API"
-    />,
-    'path': paths['countries-api']
+    name: (
+      <FormattedMessage id="menu.countriesapi" defaultMessage="Countries API" />
+    ),
+    path: paths['countries-api']
   },
   {
-    'name': <FormattedMessage
-      id="menu.drivers"
-      defaultMessage="Drivers"
-    />,
-    'path': '#'
+    name: <FormattedMessage id="menu.drivers" defaultMessage="Drivers" />,
+    path: '#'
   },
   {
-    'name': <FormattedMessage
-      id="menu.access-logs-local"
-      defaultMessage="- Access logs Local"
-    />,
-    'path': paths['access-logs-local']
+    name: (
+      <FormattedMessage
+        id="menu.access-logs-local"
+        defaultMessage="- Access logs Local"
+      />
+    ),
+    path: paths['access-logs-local']
   },
   {
-    'name': <FormattedMessage
-      id="menu.crossref-citedby"
-      defaultMessage="- Crossref Citedby"
-    />,
-    'path': paths['crossref-citedby']
+    name: (
+      <FormattedMessage
+        id="menu.crossref-citedby"
+        defaultMessage="- Crossref Citedby"
+      />
+    ),
+    path: paths['crossref-citedby']
   },
   {
-    'name': <FormattedMessage
-      id="menu.googlebooks"
-      defaultMessage="- Google Books Driver"
-    />,
-    'path': paths['google-books']
+    name: (
+      <FormattedMessage
+        id="menu.googlebooks"
+        defaultMessage="- Google Books Driver"
+      />
+    ),
+    path: paths['google-books']
   },
   {
-    'name': <FormattedMessage
-      id="menu.irus-uk"
-      defaultMessage="- Irus UK Driver"
-    />,
-    'path': paths['irus-uk']
+    name: (
+      <FormattedMessage id="menu.irus-uk" defaultMessage="- Irus UK Driver" />
+    ),
+    path: paths['irus-uk']
   },
   {
-    'name': <FormattedMessage
-      id="menu.matomo"
-      defaultMessage="- Matomo Driver"
-    />,
-    'path': paths['matomo']
+    name: (
+      <FormattedMessage id="menu.matomo" defaultMessage="- Matomo Driver" />
+    ),
+    path: paths['matomo']
   },
   // unglueit
   {
-    'name': <FormattedMessage
-      id="menu.unglueit"
-      defaultMessage="- UnglueIT Driver"
-    />,
-    'path': paths['unglueit']
+    name: (
+      <FormattedMessage id="menu.unglueit" defaultMessage="- UnglueIT Driver" />
+    ),
+    path: paths['unglueit']
   },
   // google-analytics
   {
-    'name': <FormattedMessage
-      id="menu.google-analytics"
-      defaultMessage="- Google Analytics Driver"
-    />,
-    'path': paths['google-analytics']
-  },  
-  {
-    'name': <FormattedMessage
-      id="menu.annotation"
-      defaultMessage="Annotation"
-    />,
-    'path': paths['annotation']
+    name: (
+      <FormattedMessage
+        id="menu.google-analytics"
+        defaultMessage="- Google Analytics Driver"
+      />
+    ),
+    path: paths['google-analytics']
   },
   {
-    'name': <FormattedMessage
-      id="menu.altmetrics"
-      defaultMessage="Altmetrics"
-    />,
-    'path': paths['altmetrics']
+    name: <FormattedMessage id="menu.annotation" defaultMessage="Annotation" />,
+    path: paths['annotation']
   },
   {
-    'name': <FormattedMessage
-      id="menu.widget"
-      defaultMessage="Metrics Widget"
-    />,
-    'path': paths['widget']
+    name: <FormattedMessage id="menu.altmetrics" defaultMessage="Altmetrics" />,
+    path: paths['altmetrics']
+  },
+  {
+    name: <FormattedMessage id="menu.widget" defaultMessage="Metrics Widget" />,
+    path: paths['widget']
   }
 ];

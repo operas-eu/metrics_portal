@@ -5,5 +5,5 @@ import measures from './el-GR/measures';
 export default {
   ...app,
   ...menu,
-  ...measures,
+  ...measures
 };

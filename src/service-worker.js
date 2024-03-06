@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-globals */
 workbox.core.setCacheNameDetails({
   prefix: 'antd-pro',
-  suffix: 'v1',
+  suffix: 'v1'
 });
 // Control all opened tabs ASAP
 workbox.clientsClaim();
@@ -44,7 +44,10 @@ workbox.routing.registerRoute(
   /^https:\/\/cdnjs.cloudflare.com\//,
   workbox.strategies.networkFirst()
 );
-workbox.routing.registerRoute(/\/color.less/, workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+  /\/color.less/,
+  workbox.strategies.networkFirst()
+);
 
 /**
  * Response to client after skipping waiting with MessageChannel

@@ -15,29 +15,29 @@ export default class SelectLang extends PureComponent {
       'en-GB',
       'es-ES',
       'el-GR',
-      'de-DE',
-//      'fr-FR',
-//      'de-DE',
-//      'it-IT',
-//      'nl-NL'
+      'de-DE'
+      //      'fr-FR',
+      //      'de-DE',
+      //      'it-IT',
+      //      'nl-NL'
     ];
     const languageLabels = {
       'en-GB': 'English',
       'es-ES': 'Español',
       'el-GR': 'Ελληνικά',
-      'de-DE': 'Deutsch',
-//      'fr-FR': 'Français',
-//      'it-IT': 'Italiano',
-//      'nl-NL': 'Nederlands'
+      'de-DE': 'Deutsch'
+      //      'fr-FR': 'Français',
+      //      'it-IT': 'Italiano',
+      //      'nl-NL': 'Nederlands'
     };
     const languageIcons = {
       'en-GB': '🇬🇧',
       'es-ES': '🇪🇸',
       'el-GR': '🇬🇷',
-      'de-DE': '🇩🇪 ',
-//      'fr-FR': '🇫🇷',
-//      'it-IT': '🇮🇹',
-//      'nl-NL': '🇳🇱'
+      'de-DE': '🇩🇪 '
+      //      'fr-FR': '🇫🇷',
+      //      'it-IT': '🇮🇹',
+      //      'nl-NL': '🇳🇱'
     };
     const { className } = this.props;
     const selectedLang = getLocale();

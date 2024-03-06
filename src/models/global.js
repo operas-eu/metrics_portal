@@ -12,7 +12,7 @@ export default {
         ...state,
         collapsed: payload
       };
-    },
+    }
   },
 
   subscriptions: {

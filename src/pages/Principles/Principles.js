@@ -12,7 +12,7 @@ const Principles = () => (
       <Card>
         <span
           dangerouslySetInnerHTML={{
-            __html: formatMessage({id: 'app.principles.description'})
+            __html: formatMessage({ id: 'app.principles.description' })
           }}
         />
       </Card>
