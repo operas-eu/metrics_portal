@@ -18,12 +18,6 @@ const FooterView = () => (
           title: <Icon type="github" />,
           href: 'https://github.com/hirmeos',
           blankTarget: true
-        },
-        {
-          key: 'HIRMEOS',
-          title: 'HIRMEOS',
-          href: 'http://www.hirmeos.eu',
-          blankTarget: true
         }
       ]}
       copyright={
