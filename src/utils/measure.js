@@ -262,6 +262,33 @@ const tableListDataSource = [
     source: 'Ubiquity Press',
     type: 'reads',
     version: 1
+  },
+  {
+    key: 30,
+    measure: 'https://metrics.operas-eu.org/figshare/views/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'figshare/views/v1',
+    source: 'Ubiquity Press',
+    type: 'views',
+    version: 1
+  },
+  {
+    key: 31,
+    measure: 'https://metrics.operas-eu.org/figshare/downloads/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'figshare/downloads/v1',
+    source: 'Ubiquity Press',
+    type: 'downloads',
+    version: 1
+  },
+  {
+    key: 32,
+    measure: 'https://metrics.operas-eu.org/figshare/shares/v1',
+    namespace: 'https://metrics.operas-eu.org',
+    path: 'figshare/shares/v1',
+    source: 'Ubiquity Press',
+    type: 'shares',
+    version: 1
   }
 ];
 
