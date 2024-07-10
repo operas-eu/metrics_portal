@@ -52,6 +52,12 @@ export default {
     'Total sessions on pages where the work can be read, as determined by processing the Access Logs of the website. A Session is a group of visits made by the same user within a continuous time frame, and ends after 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same work will be counted as one session.',
   'measures.descriptions.up-ga.reads.v1':
     'Total sessions on pages where the work can be read, as determined by Google Analytics. A Session is a group of visits made by the same user within a continuous time frame, and ends after 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same work will be counted as one session.',
+  'measures.descriptions.figshare.views.v1':
+    'This metric shows the number of times your Figshare item page has been viewed.',
+  'measures.descriptions.figshare.downloads.v1':
+    'This metric shows the number of times one or all files in your Figshare item have been downloaded. For example, if you item has multiple files, if someone downloads one of the files, that will be counted as one download. If someone clicks the "Download all" button, that will be counted as one download. If there are three files in an item and someone downloads each file individually, the download count will be incremented by three.',
+  'measures.descriptions.figshare.shares.v1':
+    'This metric refers to the act of sharing the item on social media platforms or other digital channels.',
   'measures.details': 'Details',
   'measures.list.all': 'All',
   'measures.list.collapse': 'Less',
