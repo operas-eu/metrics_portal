@@ -2,6 +2,9 @@ import React from 'react';
 import { FormattedMessage } from 'umi/locale';
 
 import gettingStartedEnGB from './markdown/getting-started.en-GB.md';
+import onboardingUsersEnGB from './markdown/onboarding-users.en-GB.md';
+import onboardingSendMetricsEnGB from './markdown/onboarding-sending-metrics.en-GB.md';
+import driversEnGB from './markdown/drivers.en-GB.md';
 import translationSrvEnGB from './markdown/identifier-translation-service.en-GB.md';
 import googleAnalyticsEnGB from './markdown/google-analytics.en-GB.md';
 import metricsDWEnGB from './markdown/metrics-drivers-wrapper-GB.md';
@@ -44,6 +47,15 @@ export const files = {
     'en-GB': gettingStartedEnGB,
     'el-GR': gettingStartedElGR
   },
+  'onboarding-user': {
+    'en-GB': onboardingUsersEnGB,
+  },
+  'onboarding-metrics': {
+    'en-GB': onboardingSendMetricsEnGB,
+  },  
+  'drivers': {
+    'en-GB': driversEnGB,
+  },  
   'identifier-translation-service': {
     'en-GB': translationSrvEnGB,
     'el-GR': translationSrvElGR
@@ -116,6 +128,9 @@ export const files = {
 
 export const paths = {
   'getting-started': '/docs/getting-started',
+  'onboarding-user': '/docs/onboarding-user',
+  'onboarding-metrics': '/docs/onboarding-metrics',
+  'drivers': '/docs/drivers',
   'metrics-drivers-wrapper': '/docs/metrics-drivers-wrapper',
   'identifier-translation-service': '/docs/identifier-translation-service',
   'google-analytics': '/docs/google-analytics',
@@ -143,6 +158,21 @@ export const menu = [
     ),
     path: paths['getting-started']
   },
+  {
+    name: (
+      <FormattedMessage id="menu.onboarding-user" defaultMessage="Onboard User" />
+    ),
+    path: paths['onboarding-user']
+  },
+  {
+    name: (
+      <FormattedMessage 
+      id="menu.onboarding-onboarding-metrics" 
+      defaultMessage="Onboard Metrics" 
+      />
+    ),
+    path: paths['onboarding-metrics']
+  },  
   {
     name: (
       <FormattedMessage
@@ -179,7 +209,7 @@ export const menu = [
   },
   {
     name: <FormattedMessage id="menu.drivers" defaultMessage="Drivers" />,
-    path: '#'
+    path: paths['drivers']
   },
   {
     name: (
