@@ -10,11 +10,22 @@ Follow the steps in this section to onboard your metrics to the OPERAS metrics s
 - Measures: [Different types of measures] [2].
 - Simulation Test: First run of the OPERAS Metrics to verify it works.
 
-Technical and personnel/skill requirements for becoming a full user of OPERAS Metrics:
+## Technical and personnel/skill requirements for becoming a full user of OPERAS Metrics:
 
 - Basic bash knowledge.
 - Postgres installation and creation of user and database.
 - Basic data structures knowledge.
+
+
+## Services/Apps used in this documentation:
+1. Services that must be setup Locally by the user:
+   - [Metrics-drivers-wrapper] [14]
+   - [Identifier Translator Service] [13]
+   - [Metrics Widget] [8]
+
+2. Services that will be managed by the provider:
+   - [AltMetrics Service] [12]
+   - [Metrics-API] [3]
 
 
 ## Steps for onboarding a User
@@ -25,14 +36,12 @@ Technical and personnel/skill requirements for becoming a full user of OPERAS Me
       
       1.1.1. Provider creates a new Measure in the Metrics API database.
       
-      1.1.2. Provider adds definition for new Measure to public website listing measures (or to this data: [Measures API response] [3] and have the public website run off that data).
+      1.1.2. Provider adds definition for new Measure to public website listing measures (or to this data: [Measures API response] [2] and have the public website run off that data).
       
-      1.1.3. User configures Access Logs Driver to point to the access logs.
-      
-      1.1.4. User configures Access Logs Driver to identify ‘reads’, ‘views’, ‘downloads’ against access logs (ie using RegEx).
+      1.1.3. User defines the yaml configuration with the correct data, i.e for the [Access Logs driver] [15].
 
 
-2. User registers an account on the Alt Metrics Service.
+2. User registers an account on the [AltMetrics Service] [12].
    
    2.1. Provider approves account to allow User to post metrics to Metrics API.
    
@@ -91,13 +100,13 @@ Technical and personnel/skill requirements for becoming a full user of OPERAS Me
 ![Process Diagram](/images/user-onboarding.png)
 
 ## Follow up
-Once the system is working as expected to add the new metrics to the OPERAS system follow the next documentation: [Onboarding metrics][11]
+Once the system is working as expected to add the new metrics to the OPERAS system, follow the next documentation: [Onboarding metrics][11]
 
 
 
 [1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Translator"
 [2]: https://metrics.operas-eu.org/measures "Measures"
-[3]: https://metrics-api.operas-eu.org/measures "Measures-API"
+[3]: https://metrics-api.operas-eu.org/ "Metrics-API base url" 
 [4]: https://metrics-api.operas-eu.org/events "Events"
 [5]: https://altmetrics.operas-eu.org/register "Register"
 [6]: https://altmetrics.operas-eu.org/api/get_token "Get Token"
@@ -106,3 +115,7 @@ Once the system is working as expected to add the new metrics to the OPERAS syst
 [9]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
 [10]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
 [11]: https://metrics.operas-eu.org/docs/onboarding-metrics "Onboarding metrics"
+[12]: https://altmetrics.operas-eu.org/ "Altmetrics Base url"
+[13]: https://gitlab.com/ubiquitypress/identifier_translation_service "Identifier Translator service repo"
+[14]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper "Metrics Driver Wrapper repo"
+[15]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper/-/blob/master/src/yaml/demo-access_logs.yaml?ref_type=heads "Access Logs yaml"
