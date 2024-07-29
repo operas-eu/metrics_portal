@@ -18,8 +18,7 @@ The driver is designed to extract pertinent data from the XML response, includin
 | `active`                | The plugin will not run if this is set to false, boolean.                                          |
 | `start_date`            | the date that you want to first pull results the first time the plugin runs, a string.             |
 | `uri_scheme`            | Uri scheme to save results against, string.                                                        |
-| `doi_prefix`            | can be a full DOI or a prefix.
-, integer.                                                     | 
+| `doi_prefix`            | can be a full DOI or a prefix , integer.                                                           | 
 | `username`              | username for the google books account, string.                                                     |
 | `password`              | password for the google books account, string.                                                     | 
 
