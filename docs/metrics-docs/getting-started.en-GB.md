@@ -11,7 +11,7 @@ As part of Work Package 6 of the [HIRMEOS project][1] [Ubiquity Press][25] and [
 
 ## Simplified diagram
 
-![Simplified Diagram](/images/simplified-diagram.png)
+![Simplified Diagram](/metrics_portal/images/simplified-diagram.png)
 
 ## Components
 The HIRMEOS metrics suite is made of:
@@ -42,8 +42,8 @@ Last but not least, we have a second database that combines the metrics fetched 
 
 See the diagram bellow for an overview of the different components and their interactions (click to zoom in):
 
-<a href="/images/diagram.png" data-lightbox="image-1">
-    <img src="/images/diagram.png" alt="A description of the image" />
+<a href="/metrics_portal/images/diagram.png" data-lightbox="image-1">
+    <img src="/metrics_portal/images/diagram.png" alt="A description of the image" />
 </a>
 
 ## More

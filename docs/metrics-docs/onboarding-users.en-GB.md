@@ -97,7 +97,7 @@ Follow the steps in this section to onboard your metrics to the OPERAS metrics s
 9. Please contact [Rowan Hatherley][21] or [Cristian Garcia][24] for any enquiries or issues.
 
 ## Process diagram for onboarding user
-![Process Diagram](/images/user-onboarding.png)
+![Process Diagram](/metrics_portal/images/user-onboarding.png)
 
 ## Follow up
 Once the system is working as expected to add the new metrics to the OPERAS system, follow the next documentation: [Onboarding metrics][11]

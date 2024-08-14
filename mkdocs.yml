@@ -1,4 +1,5 @@
 site_name: Metrics Documentation
+site_url: ""
 
 extra_css:
   - css/css.css
@@ -6,8 +7,8 @@ extra_css:
 
 theme:
   name: material
-  logo: /images/logo.png 
-  favicon: /images/icons/Operas-icon.png
+  logo: /metrics_portal/images/logo.png
+  favicon: /metrics_portal/images/icons/Operas-icon.png
 
   palette:
     
