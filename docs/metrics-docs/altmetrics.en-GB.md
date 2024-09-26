@@ -12,7 +12,7 @@ To prevent unwanted traffic on the metrics API we will need to approve your acco
 
 ### Postman API Documentation
 
-For those who are familiar with Postman, the Altmetrics API has been documented using Postman, and a JSON copy of this documentation can be found at https://github.com/hirmeos/altmetrics/tree/master/docs/postman.
+For those who are familiar with Postman, the Altmetrics API has been documented using Postman, and a Postman collection can be found on GitLab: [Altmetrics repository Postman][1]
 
 ### Getting a token
 
@@ -81,3 +81,5 @@ Check all DOIs associated with your user account. Remember to authenticate yours
 **Method:** *GET*
 
 Refer to postman JSON for an example call to this API endpoint.
+
+[1]: https://gitlab.com/ubiquitypress/altmetrics/-/blob/master/docs/postman/altmetrics-API.postman_collection.json?ref_type=heads "Altmetrics repository Postman"

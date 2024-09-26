@@ -33,7 +33,7 @@ To prevent unwanted traffic on the Metrics API the Ubiquity Press Tech Team will
 # Using the API
 
 - Postman API Documentation
-For those who are familiar with Postman, the Altmetrics API has been documented using Postman, and a Postman collection can be found on GitHub: https://github.com/hirmeos/altmetrics/blob/master/docs/postman/altmetrics-API.postman_collection.json
+For those who are familiar with Postman, the Altmetrics API has been documented using Postman, and a Postman collection can be found on GitLab: [Altmetrics repository Postman][12]
 
 ## Getting a token
 
@@ -170,3 +170,6 @@ Fields that can be null:
 [9]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
 [10]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
 [11]: https://metrics.operas-eu.org/docs/altmetrics "Altmetrics docs"
+
+[12]: https://gitlab.com/ubiquitypress/altmetrics/-/blob/master/docs/postman/altmetrics-API.postman_collection.json?ref_type=heads "Altmetrics repository Postman"
+
