@@ -14,11 +14,11 @@ They can be found on [PyPI][8], and each of them has been fully tested separatel
 - [Google Analytics 3 (being deprecated)][7]
 
 
-[1]: https://metrics.operas-eu.org/docs/access-logs-local "Access logs Local"
-[2]: https://metrics.operas-eu.org/docs/crossref-citedby "Crossref Citedby"
-[3]: https://metrics.operas-eu.org/docs/google-books "Google Books"
-[4]: https://metrics.operas-eu.org/docs/irus-uk "IRUS-UK"
-[5]: https://metrics.operas-eu.org/docs/matomo "Matomo"
-[6]: https://metrics.operas-eu.org/docs/unglueit "Unglue.it"
-[7]: https://metrics.operas-eu.org/docs/google-analytics "Google Analytics"
+[1]: https://metrics.operas-eu.org/metrics-docs/access-logs-local.en-GB "Access logs Local"
+[2]: https://metrics.operas-eu.org/metrics-docs/crossref-citedby.en-GB "Crossref Citedby"
+[3]: https://metrics.operas-eu.org/metrics-docs/google-books.en-GB "Google Books"
+[4]: https://metrics.operas-eu.org/metrics-docs/irus-uk.en-GB "IRUS-UK"
+[5]: https://metrics.operas-eu.org/metrics-docs/matomo.en-GB "Matomo"
+[6]: https://metrics.operas-eu.org/metrics-docs/unglueit.en-GB "Unglue.it"
+[7]: https://metrics.operas-eu.org/metrics-docs/google-analytics.en-GB "Google Analytics"
 [8]: https://pypi.org/ "Pypi"

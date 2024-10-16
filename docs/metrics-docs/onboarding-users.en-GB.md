@@ -104,17 +104,17 @@ Once the system is working as expected to add the new metrics to the OPERAS syst
 
 
 
-[1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Translator"
+[1]: https://metrics.operas-eu.org/metrics-docs/identifier-translation-service.en-GB "Translator"
 [2]: https://metrics.operas-eu.org/measures "Measures"
 [3]: https://metrics-api.operas-eu.org/ "Metrics-API base url" 
 [4]: https://metrics-api.operas-eu.org/events "Events"
 [5]: https://altmetrics.operas-eu.org/register "Register"
 [6]: https://altmetrics.operas-eu.org/api/get_token "Get Token"
-[7]: https://altmetrics.operas-eu.org/api/drivers "drivers"
-[8]: https://metrics.operas-eu.org/docs/widget "Widget"
+[7]: https://metrics.operas-eu.org/metrics-docs/drivers.en-GB/ "drivers"
+[8]: https://metrics.operas-eu.org/metrics-docs/widget.en-GB "Widget"
 [9]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
 [10]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
-[11]: https://metrics.operas-eu.org/docs/onboarding-metrics "Onboarding metrics"
+[11]: https://metrics.operas-eu.org/metrics-docs/onboarding-sending-metrics.en-GB/"Onboarding metrics"
 [12]: https://altmetrics.operas-eu.org/ "Altmetrics Base url"
 [13]: https://gitlab.com/ubiquitypress/identifier_translation_service "Identifier Translator service repo"
 [14]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper "Metrics Driver Wrapper repo"

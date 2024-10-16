@@ -58,10 +58,10 @@ You may also get in touch with our technical team:<br>
 [1]: https://www.hirmeos.eu "HIRMEOS"
 [2]: https://www.openbookpublishers.com "Open Book Publishers"
 [15]: https://www.openbookpublishers.com/section/92/1 "OA Book Usage Data"
-[16]: https://metrics.operas-eu.org/docs/identifier-translation-service "Translation service"
+[16]: https://metrics.operas-eu.org/metrics-docs/identifier-translation-service.en-GB "Translation service"
 [17]: https://ubiquity.pub
-[18]: https://metrics.operas-eu.org/docs/countries-api "Countries API"
-[19]: https://metrics.operas-eu.org/docs/tokens-api "Tokens API"
+[18]: https://metrics.operas-eu.org/metrics-docs/countries-api.en-GB "Countries API"
+[19]: https://metrics.operas-eu.org/metrics-docs/tokens-api.en-GB "Tokens API"
 [20]: mailto:javi@openbookpublishers.com "Javier Arias email address"
 [21]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
 [22]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper "Metrics Drivers repository"

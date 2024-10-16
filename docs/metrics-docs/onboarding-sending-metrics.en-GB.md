@@ -159,17 +159,17 @@ Fields that can be null:
 * "country_uri" - This is set as null If country is unknown, or irrelevant (e.g., with a tweet or citation).
 
 
-[1]: https://metrics.operas-eu.org/docs/identifier-translation-service "Translator"
+[1]: https://metrics.operas-eu.org/metrics-docs/identifier-translation-service.en-GB "Translator"
 [2]: https://metrics.operas-eu.org/measures "Measures"
 [3]: https://metrics-api.operas-eu.org/measures "Measures-API"
 [4]: https://metrics-api.operas-eu.org/events "Events"
 [5]: https://altmetrics.operas-eu.org/register "Register"
 [6]: https://altmetrics.operas-eu.org/api/get_token "Get Token"
-[7]: https://altmetrics.operas-eu.org/api/drivers "drivers"
-[8]: https://metrics.operas-eu.org/docs/widget "Widget"
+[7]: https://metrics.operas-eu.org/metrics-docs/drivers.en-GB "drivers"
+[8]: https://metrics.operas-eu.org/metrics-docs/widget.en-GB "Widget"
 [9]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
 [10]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
-[11]: https://metrics.operas-eu.org/docs/altmetrics "Altmetrics docs"
+[11]: https://metrics.operas-eu.org/metrics-docs/altmetrics.en-GB "Altmetrics docs"
 
 [12]: https://gitlab.com/ubiquitypress/altmetrics/-/blob/master/docs/postman/altmetrics-API.postman_collection.json?ref_type=heads "Altmetrics repository Postman"
 
