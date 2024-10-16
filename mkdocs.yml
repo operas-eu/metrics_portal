@@ -7,8 +7,8 @@ extra_css:
 
 theme:
   name: material
-  logo: /metrics_portal/images/logo.png
-  favicon: /metrics_portal/images/icons/Operas-icon.png
+  logo: /images/logo.png
+  favicon: /images/icons/Operas-icon.png
 
   palette:
     

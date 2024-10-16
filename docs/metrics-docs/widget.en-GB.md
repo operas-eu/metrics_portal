@@ -215,7 +215,7 @@ The options object allows you to configure the general behaviour widget.
 
 Within the widget, a _tab_ is considered to be a single item shown in the navigation (eg. downloads, sessions, reads …) that, when clicked, will open a panel below the navigation with graphs:
 
-![Widget Image](/metrics_portal/images/widget.png)
+![Widget Image](/images/widget.png)
 
 There are two _tabs_ in this image: the `Sessions` tab (red outline), which is toggled open to reveal its graphs, and the `Downloads` tab (green outline) which is not toggled open but still appears in the navigation.
 
@@ -255,7 +255,7 @@ The following properties are accepted within your scope:
 | startDate | no       | `string`        | the date to begin counting metrics from; useful if you are migrating from one provider to another and don’t want duplicate counts. the value must be parsable into a `Date()` call.<br/><br/>as an example, a `startDate` set to `"2023-07-01"` will only begin counts within the scope that are **_on or after_** 1 July, 2023.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | endDate   | no       | `string`        | the date to stop counting metrics from; useful if you are migrating from one provider to another and don’t want duplicate counts. the value must be parsable into a `Date()` call.<br/><br/>as an example, an `endDate` set to `"2023-07-01"` will stop counting values with a date **_on or after_** 1 July, 2023.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-![Widget Image 2](/metrics_portal/images/widget2.png)
+![Widget Image 2](/images/widget2.png)
 
 A stacked line graph with three different scopes. Each scope has specified a `title` property, outlined in red.
 
@@ -728,7 +728,7 @@ Here is an example of how you would use the CSS variables:
 }
 ```
 
-![Widget Image 3](/metrics_portal/images/widget3.png)
+![Widget Image 3](/images/widget3.png)
 
 Whilst all browsers should support CSS Variables, you are welcome to completely ignore them and manually override the individual widget classes in your own stylesheets.
 
