@@ -1,5 +1,5 @@
 site_name: Metrics Documentation
-site_url: ""
+site_url: "http://metrics.operas-eu.org/"
 
 extra_css:
   - css/css.css
