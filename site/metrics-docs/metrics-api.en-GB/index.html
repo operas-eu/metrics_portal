@@ -11,10 +11,10 @@
         <link rel="canonical" href="http://metrics.operas-eu.org/metrics-docs/metrics-api.en-GB/">
       
       
-        <link rel="prev" href="../matomo.en-GB/">
+        <link rel="prev" href="../onboarding-sending-metrics.en-GB/">
       
       
-        <link rel="next" href="../onboarding-sending-metrics.en-GB/">
+        <link rel="next" href="../access-logs-local.en-GB/">
       
       
       <link rel="icon" href="/images/icons/Operas-icon.png">
@@ -586,6 +586,290 @@
   
   
   
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Metrics API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Metrics API
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      API routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET citations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET citations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="POST events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET measures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-popularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET popularity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET popularity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="POST services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DELETE services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-service_events" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET service_events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET service_events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Params
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -593,14 +877,14 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -611,8 +895,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             Drivers & Plugins
           </label>
@@ -760,85 +1044,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Metrics API
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Metrics API
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api-routes" class="md-nav__link">
-    <span class="md-ellipsis">
-      API routes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-events-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET /events parameters
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1001,9 +1206,9 @@
 
 
 <h1 id="metrics-api">Metrics API</h1>
-<p>The Metrics API is both available as read-only via GET requests, and as write-read access </p>
+<p>The Metrics API is both available as read-only via GET requests, and as "read-write access" </p>
 <ul>
-<li><strong>Metrics API Source</strong>: https://github.com/hirmeos/metrics-api</li>
+<li><strong>Metrics API Source</strong>: <a href="https://gitlab.com/ubiquitypress/metrics-api" title="Metrics-api link">https://gitlab.com/ubiquitypress/metrics-api</a></li>
 </ul>
 <h3 id="api-routes">API routes</h3>
 <p>The following methods are allowed:</p>
@@ -1018,41 +1223,698 @@
 <tbody>
 <tr>
 <td><code>GET</code></td>
-<td><code>/measures</code></td>
+<td><a href="#get-citations"><code>/citations</code></a></td>
+<td>Retrieve citation metadata for a given work URI</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-events"><code>/events</code></a></td>
+<td>Retrieves the measures from the API with various parameters, see below</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><a href="#post-events"><code>/events</code></a></td>
+<td>Creates a new event using JSON in the body</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-measures"><code>/measures</code></a></td>
 <td>List the descriptions of the measures available in the API</td>
 </tr>
 <tr>
 <td><code>GET</code></td>
-<td><code>/events</code></td>
-<td>Retrieves the measures from the API with various parameters, see below</td>
+<td><a href="#get-popularity"><code>/popularity</code></a></td>
+<td>Get list of external_ids ordered by the most popular books or journals</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-services"><code>/services</code></a></td>
+<td>Get list of the services, each element holds the work_uri and the external_id</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><a href="#post-services"><code>/services</code></a></td>
+<td>Create new services, work_uri and the external_id should be posted in the body as a JSON</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-services"><code>/services</code></a></td>
+<td>Delete services, takes a list of lists with each element holding the work_uri and the external_id.</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-service_events"><code>/service_events</code></a></td>
+<td>Returns a list of works registered to a given service. Takes the service_code and start_date as Query Params.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="get-events-parameters"><code>GET /events</code> parameters</h3>
-<p>When retrieving measures, you can (and should) provide some parameters to the request, they can be seen below:</p>
+<h3 id="get-citations">GET <code>citations</code></h3>
+<h4 id="params">Params</h4>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>work_uri</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>Uniform Resource Identifier (URI) that uniquely identifies a specific work or piece of content saved in the Event table.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/citations?work_uri=info:doi:10.1242/dev.164269</code></p>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;authors&quot;: [
+                {
+                    &quot;last_name&quot;: &quot;Toro-Tapia&quot;,
+                    &quot;initial&quot;: &quot;G.&quot;
+                },
+                {
+                    &quot;last_name&quot;: &quot;Villaseca&quot;,
+                    &quot;initial&quot;: &quot;S.&quot;
+                }
+            ],
+            &quot;editors&quot;: [],
+            &quot;year&quot;: 2018,
+            &quot;title&quot;: &quot;The Ric-8A/Gα13/FAK signaling cascade controls focal adhesion formation during neural crest cell migration&quot;,
+            &quot;source&quot;: &quot;Development&quot;,
+            &quot;volume&quot;: null,
+            &quot;issue&quot;: null,
+            &quot;page&quot;: null,
+            &quot;doi&quot;: &quot;10.1242/dev.164269&quot;,
+            &quot;type&quot;: &quot;journal-article&quot;
+        }
+    ]
+}
+</code></pre>
+<h3 id="get-events">GET <code>events</code></h3>
+<h4 id="params_1">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event_id</td>
+<td>query</td>
+<td>string</td>
+<td>no</td>
+<td>UUID saved in the Event table as an identifier.</td>
+</tr>
+<tr>
+<td>aggregation</td>
+<td>query</td>
+<td>string</td>
+<td>no</td>
+<td>The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following: empty, measure_uri,country_uri, year,measure_uri, measure_uri,month, month,measure_uri, measure_uri,year, country_uri,measure_uri, measure_uri.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>string</td>
+<td>no</td>
+<td>Many different options can be used in the filter, i.e. filtering on measure_uri or on work_uri. Those can be together or even used multiple times by separating them with a comma ","</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>https://metrics-api.operas-eu.org/events?event_id=5e865d82-fcd4-4586-b209-8722ed1246e3</code></p>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;code&quot;: 200,
+  &quot;count&quot;: 1,
+  &quot;data&quot;: [
+    {
+      &quot;event_id&quot;: &quot;5e865d82-fcd4-4586-b209-8722ed1246e3&quot;,
+      &quot;work_uri&quot;: &quot;info:doi:10.12681/aprlp.16&quot;,
+      &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/ekt/landingsessions/v1&quot;,
+      &quot;timestamp&quot;: &quot;2021-02-10T00:00:00+0000&quot;,
+      &quot;value&quot;: 1000,
+      &quot;event_uri&quot;: &quot;1&quot;,
+      &quot;country_uri&quot;: &quot;urn:iso:std:3166:-2:GR&quot;,
+      &quot;uploader_uri&quot;: &quot;acct:kstamatis@ekt.gr&quot;
+    }
+  ]
+}
+</code></pre>
+<blockquote>
+<p>Request Example with aggregation and filters</p>
+</blockquote>
+<p><code>https://metrics-api.operas-eu.org/events?aggregation=measure_uri&amp;filter=work_uri:info:doi:10.21435/sflin.24</code></p>
+<blockquote>
+<p>Response Example with aggregation and filters</p>
+</blockquote>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;code&quot;: 200,
+  &quot;count&quot;: 4,
+  &quot;data&quot;: [
+    {
+      &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/oapen/downloads/v1&quot;,
+      &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+      &quot;source&quot;: &quot;OAPEN&quot;,
+      &quot;type&quot;: &quot;downloads&quot;,
+      &quot;version&quot;: &quot;v1&quot;,
+      &quot;value&quot;: 209
+    },
+    {
+      &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/up-logs/downloads/v1&quot;,
+      &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+      &quot;source&quot;: &quot;Ubiquity Press&quot;,
+      &quot;type&quot;: &quot;downloads&quot;,
+      &quot;version&quot;: &quot;v1&quot;,
+      &quot;value&quot;: 313
+    }
+  ]
+}
+</code></pre>
+<h3 id="post-events">POST <code>events</code></h3>
+<h4 id="params_2">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>work_uri</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>Uniform Resource Identifier (URI) that uniquely identifies a specific work or piece of content saved in the Event table.</td>
+</tr>
+<tr>
+<td>measure_uri</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>reference to a service or endpoint that provides metrics or measurements.</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>Date in ISO 8601 format.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>body</td>
+<td>integer</td>
+<td>yes</td>
+<td>Number of times this event entry occurred.</td>
+</tr>
+<tr>
+<td>event_uri</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>URI used for single-event metrics, to give more information about the event. The format is specific to the type of event.</td>
+</tr>
+<tr>
+<td>country_uri</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>URN (Uniform Resource Name) format specified by the ISO 3166 standard, which is used for country codes. Examples: <code>urn:iso:std:3166:-2:US</code> (United States), <code>urn:iso:std:3166:-2:PK</code> (Pakistan)</td>
+</tr>
+<tr>
+<td>uploader_uri</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>URI to identify the user that uploaded the metrics event. This uses the acct URI scheme</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/events</code></p>
+<ul>
+<li>Body Parameters</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;work_uri&quot;: &quot;http://example.com/work/2&quot;,
+    &quot;measure_uri&quot;: &quot;http://example.com/measure/2&quot;,
+    &quot;timestamp&quot;: &quot;2023-10-01T12:00:00+0000&quot;,
+    &quot;value&quot;: 100,
+    &quot;event_uri&quot;: &quot;http://example.com/event/2&quot;,
+    &quot;country_uri&quot;: &quot;http://example.com/country/2&quot;,
+    &quot;uploader_uri&quot;: &quot;http://example.com/uploader/2&quot;
+}
+</code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;event_id&quot;: &quot;22bfe31d-0374-45d6-9e6a-f8285b2bc25e&quot;,
+            &quot;work_uri&quot;: &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-300&quot;,
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/world-reader/users/v1&quot;,
+            &quot;timestamp&quot;: &quot;2024-01-01T00:00:00+0000&quot;,
+            &quot;value&quot;: 100,
+            &quot;event_uri&quot;: &quot;event_uri_1&quot;,
+            &quot;country_uri&quot;: &quot;urn:iso:std:3166:-2:ZW&quot;,
+            &quot;uploader_uri&quot;: &quot;uploader_uri_1&quot;
+        }
+    ]
+}
+</code></pre>
+<h3 id="get-measures">GET <code>measures</code></h3>
+<h4 id="params_3">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>aggregation</td>
-<td>The results can be aggregated on certain values, i.e. aggregation on <code>measure_uri</code>. Aggregation must be one of the following: empty, <code>measure_uri,country_uri</code>, <code>year,measure_uri</code>, <code>measure_uri,month</code>, <code>month,measure_uri</code>, <code>measure_uri,year</code>, <code>country_uri,measure_uri</code>, <code>measure_uri</code>.</td>
-</tr>
-<tr>
-<td>filter</td>
-<td>Many different options can be used in the filter, i.e. filtering on <code>measure_uri</code> or on <code>work_uri</code>. Those can be together or even used multiple times by separating them with a comma "<code>,</code>"</td>
+<td>query</td>
+<td>string</td>
+<td>no</td>
+<td>The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following: empty, measure_uri,country_uri, year,measure_uri, measure_uri,month, month,measure_uri, measure_uri,year, country_uri,measure_uri, measure_uri.</td>
 </tr>
 </tbody>
 </table>
-<p>Examples:</p>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/measures?aggregation=measure_uri</code></p>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 19,
+    &quot;data&quot;: [
+        {
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/google-books/views/v1&quot;,
+            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+            &quot;source&quot;: &quot;Google Books&quot;,
+            &quot;type&quot;: &quot;views&quot;,
+            &quot;version&quot;: &quot;v1&quot;,
+            &quot;description&quot;: [
+                {
+                    &quot;locale_code&quot;: &quot;de_DE&quot;,
+                    &quot;locale_name&quot;: &quot;German - Germany&quot;,
+                    &quot;description&quot;: &quot;Book Visits beschreibt die Gesamtanzahl von Besuchen für einen Titel. Dies kann mehrere Besuche von derselben IP-Adresse beinhalten, die jeweils als einzelne Zugriffe gezählt werden. Google Book reports beinhalten nur Book Visits und Seitenviews.&quot;
+                },
+                {
+                    &quot;locale_code&quot;: &quot;en_GB&quot;,
+                    &quot;locale_name&quot;: &quot;English - United Kingdom&quot;,
+                    &quot;description&quot;: &quot;Book Visits represent the total number of times a book has been accessed. This can include multiple visits by the same IP address, which are counted as separate visits. Google Books only reports back to the publisher the Book Visits and Book Page Views.&quot;
+                }
+            ]
+        },
+        {
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/obp-html/sessions/v1&quot;,
+            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+            &quot;source&quot;: &quot;Open Book Publishers HTML Reader&quot;,
+            &quot;type&quot;: &quot;sessions&quot;,
+            &quot;version&quot;: &quot;v1&quot;,
+            &quot;description&quot;: [
+                {
+                    &quot;locale_code&quot;: &quot;en_GB&quot;,
+                    &quot;locale_name&quot;: &quot;English - United Kingdom&quot;,
+                    &quot;description&quot;: &quot;A Book Session is a group of visits made by the same user within a continuous time frame. To record these sessions at Open Book Publishers we use Google Analytics, and a session lasts until there are 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same book will be counted as one session. For more information on Google Analytics’ definition of a session read: &lt;a href=\&quot;https://support.google.com/analytics/answer/2731565\&quot;&gt;How a web session is defined in Analytics&lt;/a&gt;.&quot;
+                }
+            ]
+        }
+    ]
+}        
+</code></pre>
+<h3 id="get-popularity">GET <code>popularity</code></h3>
+<h4 id="params_4">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service_code</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/popularity?service_code=up-p-testing</code></p>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 6,
+    &quot;data&quot;: [
+        123,
+        678,
+        345
+    ]
+}
+
+</code></pre>
+<h3 id="get-services">GET <code>services</code></h3>
+<h4 id="params_5">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service_code</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td>object</td>
+<td>no</td>
+<td>none</td>
+</tr>
+<tr>
+<td>uris</td>
+<td>body</td>
+<td>[array]</td>
+<td>yes</td>
+<td>Work_uri and external_id.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/services?service_code=up-p-testing</code></p>
 <ul>
-<li>Example of simple query on a DOI and results aggregated by the measure_uri: <code>https://metrics-api.operas-eu.org/events?aggregation=measure_uri&amp;filter=work_uri:info:doi:10.11647/obp.0020</code></li>
-<li>Example of the same query but selecting only a couple of measures: <code>https://metrics-api.operas-eu.org/events?aggregation=measure_uri&amp;filter=work_uri:info:doi:10.11647/obp.0020,measure_uri:https://metrics.operas-eu.org/oapen/downloads/v1,measure_uri:https://metrics.operas-eu.org/obp/downloads/v1</code></li>
+<li>Body Parameters</li>
 </ul>
+<pre><code class="language-json">{
+  &quot;service_code&quot;: &quot;up-p-testing&quot;,
+  &quot;uris&quot;: [
+    [
+        &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-300&quot;,
+        123
+    ],
+    [
+        &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-3&quot;, 
+        345
+    ]
+  ]
+}
+</code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 4,
+    &quot;data&quot;: [
+        [
+            &quot;info:doi:10.56687/9781529237290&quot;, 
+            177
+        ],
+        [
+            &quot;info:doi:10.7765/9781526166814&quot;, 
+            211
+        ], 
+        [
+            &quot;info:doi:10.36019/9780813540979&quot;, 
+            191
+        ], 
+        [
+            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-32&quot;, 
+            32
+        ]
+    ]
+}
+</code></pre>
+<h3 id="post-services">POST <code>services</code></h3>
+<h4 id="params_6">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td>object</td>
+<td>no</td>
+<td>Contains the service_code and the uris.</td>
+</tr>
+<tr>
+<td>service_code</td>
+<td>body</td>
+<td>string</td>
+<td>yes</td>
+<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
+</tr>
+<tr>
+<td>uris</td>
+<td>body</td>
+<td>[array]</td>
+<td>yes</td>
+<td>Work_uri and external_id.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/services</code></p>
+<ul>
+<li>Body Parameters</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;service_code&quot;: &quot;up-p-testing&quot;,
+    &quot;uris&quot;: [
+        [
+            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-300&quot;, 
+            123
+        ],
+        [
+            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-3&quot;, 
+            345
+        ],
+        [
+            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-305&quot;, 
+            678
+        ]
+    ]
+}
+</code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 3,
+    &quot;data&quot;: &quot;200&quot;
+}
+
+</code></pre>
+<h3 id="delete-services">DELETE <code>services</code></h3>
+<h4 id="params_7">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service_code</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td>object</td>
+<td>no</td>
+<td>List of lists consisting of uris.</td>
+</tr>
+<tr>
+<td>uris</td>
+<td>body</td>
+<td>[array]</td>
+<td>yes</td>
+<td>Work_uri and external_id.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/services</code></p>
+<ul>
+<li>Body Parameters</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;service_code&quot;: &quot;up-p-testing&quot;,
+  &quot;uris&quot;: [
+    [
+      &quot;tag:ubiquitypress.com&quot;,
+      &quot;2024|press|book:up-p-testing-300&quot;
+    ],
+    [
+      &quot;tag:ubiquitypress.com&quot;,
+      &quot;2023|press|book:up-p-testing-310&quot;
+    ]
+  ]
+}
+</code></pre>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 42,
+    &quot;data&quot;: &quot;2 works deleted from service, up-p-testing&quot;
+}
+
+</code></pre>
+<h3 id="get-service_events">GET <code>service_events</code></h3>
+<h4 id="params_8">Params</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service_code</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>ISO 8601 format (YYYY-MM-DD) as a starting date to retrieve the events from.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<p><code>http://localhost:8080/service_events?service_code=up-p-testing&amp;start_date=2020-09-18</code></p>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 5,
+    &quot;data&quot;: [
+        {
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+            &quot;source&quot;: &quot;Crossref&quot;,
+            &quot;type&quot;: &quot;citations&quot;,
+            &quot;version&quot;: &quot;v1&quot;,
+            &quot;value&quot;: 600
+        },
+        {
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/open-edition/downloads/v1&quot;,
+            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+            &quot;source&quot;: &quot;Open Edition&quot;,
+            &quot;type&quot;: &quot;downloads&quot;,
+            &quot;version&quot;: &quot;v1&quot;,
+            &quot;value&quot;: 500
+        }
+    ]
+}
+</code></pre>
 
 
 
