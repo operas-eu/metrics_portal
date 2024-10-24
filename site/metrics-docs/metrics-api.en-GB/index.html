@@ -735,126 +735,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#get-popularity" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET popularity
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GET popularity">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#params_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Params
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GET services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#params_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Params
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#params_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Params
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      DELETE services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DELETE services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#params_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Params
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-service_events" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET service_events
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GET service_events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#params_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      Params
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1206,7 +1086,7 @@
 
 
 <h1 id="metrics-api">Metrics API</h1>
-<p>The Metrics API is both available as read-only via GET requests, and as "read-write access" </p>
+<p>The Metrics API is available as read-only via GET requests and with 'read-write access." </p>
 <ul>
 <li><strong>Metrics API Source</strong>: <a href="https://gitlab.com/ubiquitypress/metrics-api" title="Metrics-api link">https://gitlab.com/ubiquitypress/metrics-api</a></li>
 </ul>
@@ -1229,42 +1109,17 @@
 <tr>
 <td><code>GET</code></td>
 <td><a href="#get-events"><code>/events</code></a></td>
-<td>Retrieves the measures from the API with various parameters, see below</td>
+<td>Retrieve measures from the API with various parameters. See below.</td>
 </tr>
 <tr>
 <td><code>POST</code></td>
 <td><a href="#post-events"><code>/events</code></a></td>
-<td>Creates a new event using JSON in the body</td>
+<td>Create a new event using JSON in the body</td>
 </tr>
 <tr>
 <td><code>GET</code></td>
 <td><a href="#get-measures"><code>/measures</code></a></td>
 <td>List the descriptions of the measures available in the API</td>
-</tr>
-<tr>
-<td><code>GET</code></td>
-<td><a href="#get-popularity"><code>/popularity</code></a></td>
-<td>Get list of external_ids ordered by the most popular books or journals</td>
-</tr>
-<tr>
-<td><code>GET</code></td>
-<td><a href="#get-services"><code>/services</code></a></td>
-<td>Get list of the services, each element holds the work_uri and the external_id</td>
-</tr>
-<tr>
-<td><code>POST</code></td>
-<td><a href="#post-services"><code>/services</code></a></td>
-<td>Create new services, work_uri and the external_id should be posted in the body as a JSON</td>
-</tr>
-<tr>
-<td><code>DELETE</code></td>
-<td><a href="#delete-services"><code>/services</code></a></td>
-<td>Delete services, takes a list of lists with each element holding the work_uri and the external_id.</td>
-</tr>
-<tr>
-<td><code>GET</code></td>
-<td><a href="#get-service_events"><code>/service_events</code></a></td>
-<td>Returns a list of works registered to a given service. Takes the service_code and start_date as Query Params.</td>
 </tr>
 </tbody>
 </table>
@@ -1351,19 +1206,34 @@
 <td>query</td>
 <td>string</td>
 <td>no</td>
-<td>The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following: empty, measure_uri,country_uri, year,measure_uri, measure_uri,month, month,measure_uri, measure_uri,year, country_uri,measure_uri, measure_uri.</td>
+<td>The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following options:<br>- <code>empty</code><br>- <code>measure_uri,country_uri</code><br>- <code>year,measure_uri</code><br>- <code>month,measure_uri</code><br>- <code>year,country_uri</code><br>- <code>measure_uri</code>.</td>
 </tr>
 <tr>
 <td>filter</td>
 <td>query</td>
 <td>string</td>
 <td>no</td>
-<td>Many different options can be used in the filter, i.e. filtering on measure_uri or on work_uri. Those can be together or even used multiple times by separating them with a comma ","</td>
+<td>Many different options can be used in the filter, i.e. filtering on measure_uri or on work_uri. These can be combined or even used multiple times by separating them with a comma ","</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>query</td>
+<td>string</td>
+<td>yes</td>
+<td>ISO 8601 format (YYYY-MM-DD) as a starting date to retrieve the events from.</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>query</td>
+<td>string</td>
+<td>no</td>
+<td>ISO 8601 format (YYYY-MM-DD) as a end date to retrieve the events from.</td>
 </tr>
 </tbody>
 </table>
+<p>NOTE: You can use either the filter for the event_id, or the aggregation, or a combination of both, with the start and end dates.</p>
 <blockquote>
-<p>Request Example</p>
+<p>Request Example with a specific id:</p>
 </blockquote>
 <p><code>https://metrics-api.operas-eu.org/events?event_id=5e865d82-fcd4-4586-b209-8722ed1246e3</code></p>
 <blockquote>
@@ -1387,12 +1257,88 @@
   ]
 }
 </code></pre>
+<ul>
+<li>Aggregation and Filters:</li>
+</ul>
+<blockquote>
+<p>See the difference between a plain request with 26 results:</p>
+</blockquote>
+<p><code>http://localhost:8080/events</code></p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 26,
+    &quot;data&quot;: [
+        {
+            &quot;event_id&quot;: &quot;fa5fcb71-78ca-4183-a44b-d07030bc5e80&quot;,
+            &quot;work_uri&quot;: &quot;info:doi:10.5334/jors.122&quot;,
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+            &quot;timestamp&quot;: &quot;2022-08-29T01:00:00+0100&quot;,
+            &quot;value&quot;: 1,
+            &quot;event_uri&quot;: &quot;10.5194/gmd-15-6399-2022&quot;,
+            &quot;country_uri&quot;: null,
+            &quot;uploader_uri&quot;: &quot;acct:tech@ubiquitypress.com&quot;
+        },
+        {
+            &quot;event_id&quot;: &quot;da55c8ab-12df-4885-8b92-edff51bc23d0&quot;,
+            &quot;work_uri&quot;: &quot;info:doi:10.5334/jors.148&quot;,
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+            &quot;timestamp&quot;: &quot;2022-11-08T00:00:00+0000&quot;,
+            &quot;value&quot;: 1,
+            &quot;event_uri&quot;: &quot;10.5194/npg-30-13-2023&quot;,
+            &quot;country_uri&quot;: null,
+            &quot;uploader_uri&quot;: &quot;acct:tech@ubiquitypress.com&quot;
+        },
+        ....
+    ]
+}
+</code></pre>
+<blockquote>
+<p>Same request with aggregation, we get only 3 results and ordered by year:</p>
+</blockquote>
+<p><code>http://localhost:8080/events?aggregation=year,measure_uri</code></p>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 3,
+    &quot;data&quot;: [
+        {
+            &quot;year&quot;: &quot;2022&quot;,
+            &quot;data&quot;: [
+                {
+                    &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+                    &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+                    &quot;source&quot;: &quot;Crossref&quot;,
+                    &quot;type&quot;: &quot;citations&quot;,
+                    &quot;version&quot;: &quot;v1&quot;,
+                    &quot;value&quot;: 3
+                }
+            ]
+        },
+        {
+            &quot;year&quot;: &quot;2023&quot;,
+            &quot;data&quot;: [
+                {
+                    &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+                    &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
+                    &quot;source&quot;: &quot;Crossref&quot;,
+                    &quot;type&quot;: &quot;citations&quot;,
+                    &quot;version&quot;: &quot;v1&quot;,
+                    &quot;value&quot;: 2
+                }
+            ]
+        },
+        ...
+    ]
+}
+
+</code></pre>
 <blockquote>
 <p>Request Example with aggregation and filters</p>
 </blockquote>
 <p><code>https://metrics-api.operas-eu.org/events?aggregation=measure_uri&amp;filter=work_uri:info:doi:10.21435/sflin.24</code></p>
 <blockquote>
-<p>Response Example with aggregation and filters</p>
+<p>Response Example with aggregation and filters in the live environment:</p>
 </blockquote>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;ok&quot;,
@@ -1414,8 +1360,44 @@
       &quot;type&quot;: &quot;downloads&quot;,
       &quot;version&quot;: &quot;v1&quot;,
       &quot;value&quot;: 313
-    }
+    },
+    ...
   ]
+}
+</code></pre>
+<blockquote>
+<p>Request Example with start date and end date</p>
+</blockquote>
+<p><code>http://localhost:8080/events?start_date=2020-09-18&amp;end_date=2024-08-18</code></p>
+<blockquote>
+<p>Response Example with start date and end date</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;code&quot;: 200,
+    &quot;count&quot;: 2,
+    &quot;data&quot;: [
+        {
+            &quot;event_id&quot;: &quot;fa5fcb71-78ca-4183-a44b-d07030bc5e80&quot;,
+            &quot;work_uri&quot;: &quot;info:doi:10.5334/jors.122&quot;,
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+            &quot;timestamp&quot;: &quot;2022-08-29T01:00:00+0100&quot;,
+            &quot;value&quot;: 1,
+            &quot;event_uri&quot;: &quot;10.5194/gmd-15-6399-2022&quot;,
+            &quot;country_uri&quot;: null,
+            &quot;uploader_uri&quot;: &quot;acct:tech@ubiquitypress.com&quot;
+        },
+        {
+            &quot;event_id&quot;: &quot;da55c8ab-12df-4885-8b92-edff51bc23d0&quot;,
+            &quot;work_uri&quot;: &quot;info:doi:10.5334/jors.148&quot;,
+            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
+            &quot;timestamp&quot;: &quot;2022-11-08T00:00:00+0000&quot;,
+            &quot;value&quot;: 1,
+            &quot;event_uri&quot;: &quot;10.5194/npg-30-13-2023&quot;,
+            &quot;country_uri&quot;: null,
+            &quot;uploader_uri&quot;: &quot;acct:tech@ubiquitypress.com&quot;
+        }
+    ]
 }
 </code></pre>
 <h3 id="post-events">POST <code>events</code></h3>
@@ -1443,7 +1425,7 @@
 <td>body</td>
 <td>string</td>
 <td>yes</td>
-<td>reference to a service or endpoint that provides metrics or measurements.</td>
+<td>A reference to a service or endpoint that provides metrics or measurements.</td>
 </tr>
 <tr>
 <td>timestamp</td>
@@ -1463,14 +1445,14 @@
 <td>event_uri</td>
 <td>body</td>
 <td>string</td>
-<td>yes</td>
+<td>no</td>
 <td>URI used for single-event metrics, to give more information about the event. The format is specific to the type of event.</td>
 </tr>
 <tr>
 <td>country_uri</td>
 <td>body</td>
 <td>string</td>
-<td>yes</td>
+<td>no</td>
 <td>URN (Uniform Resource Name) format specified by the ISO 3166 standard, which is used for country codes. Examples: <code>urn:iso:std:3166:-2:US</code> (United States), <code>urn:iso:std:3166:-2:PK</code> (Pakistan)</td>
 </tr>
 <tr>
@@ -1534,25 +1516,25 @@
 </thead>
 <tbody>
 <tr>
-<td>aggregation</td>
+<td>None</td>
 <td>query</td>
 <td>string</td>
 <td>no</td>
-<td>The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following: empty, measure_uri,country_uri, year,measure_uri, measure_uri,month, month,measure_uri, measure_uri,year, country_uri,measure_uri, measure_uri.</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
-<p><code>http://localhost:8080/measures?aggregation=measure_uri</code></p>
+<p><code>http://localhost:8080/measures</code></p>
 <blockquote>
 <p>Response Example</p>
 </blockquote>
 <pre><code class="language-json">{
     &quot;status&quot;: &quot;ok&quot;,
     &quot;code&quot;: 200,
-    &quot;count&quot;: 19,
+    &quot;count&quot;: 2,
     &quot;data&quot;: [
         {
             &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/google-books/views/v1&quot;,
@@ -1586,331 +1568,6 @@
                     &quot;description&quot;: &quot;A Book Session is a group of visits made by the same user within a continuous time frame. To record these sessions at Open Book Publishers we use Google Analytics, and a session lasts until there are 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same book will be counted as one session. For more information on Google Analytics’ definition of a session read: &lt;a href=\&quot;https://support.google.com/analytics/answer/2731565\&quot;&gt;How a web session is defined in Analytics&lt;/a&gt;.&quot;
                 }
             ]
-        }
-    ]
-}        
-</code></pre>
-<h3 id="get-popularity">GET <code>popularity</code></h3>
-<h4 id="params_4">Params</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Location</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>service_code</td>
-<td>query</td>
-<td>string</td>
-<td>yes</td>
-<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<p><code>http://localhost:8080/popularity?service_code=up-p-testing</code></p>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre><code class="language-json">{
-    &quot;status&quot;: &quot;ok&quot;,
-    &quot;code&quot;: 200,
-    &quot;count&quot;: 6,
-    &quot;data&quot;: [
-        123,
-        678,
-        345
-    ]
-}
-
-</code></pre>
-<h3 id="get-services">GET <code>services</code></h3>
-<h4 id="params_5">Params</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Location</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>service_code</td>
-<td>query</td>
-<td>string</td>
-<td>yes</td>
-<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
-</tr>
-<tr>
-<td>body</td>
-<td>body</td>
-<td>object</td>
-<td>no</td>
-<td>none</td>
-</tr>
-<tr>
-<td>uris</td>
-<td>body</td>
-<td>[array]</td>
-<td>yes</td>
-<td>Work_uri and external_id.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<p><code>http://localhost:8080/services?service_code=up-p-testing</code></p>
-<ul>
-<li>Body Parameters</li>
-</ul>
-<pre><code class="language-json">{
-  &quot;service_code&quot;: &quot;up-p-testing&quot;,
-  &quot;uris&quot;: [
-    [
-        &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-300&quot;,
-        123
-    ],
-    [
-        &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-3&quot;, 
-        345
-    ]
-  ]
-}
-</code></pre>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre><code class="language-json">{
-    &quot;status&quot;: &quot;ok&quot;,
-    &quot;code&quot;: 200,
-    &quot;count&quot;: 4,
-    &quot;data&quot;: [
-        [
-            &quot;info:doi:10.56687/9781529237290&quot;, 
-            177
-        ],
-        [
-            &quot;info:doi:10.7765/9781526166814&quot;, 
-            211
-        ], 
-        [
-            &quot;info:doi:10.36019/9780813540979&quot;, 
-            191
-        ], 
-        [
-            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-32&quot;, 
-            32
-        ]
-    ]
-}
-</code></pre>
-<h3 id="post-services">POST <code>services</code></h3>
-<h4 id="params_6">Params</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Location</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>body</td>
-<td>body</td>
-<td>object</td>
-<td>no</td>
-<td>Contains the service_code and the uris.</td>
-</tr>
-<tr>
-<td>service_code</td>
-<td>body</td>
-<td>string</td>
-<td>yes</td>
-<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
-</tr>
-<tr>
-<td>uris</td>
-<td>body</td>
-<td>[array]</td>
-<td>yes</td>
-<td>Work_uri and external_id.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<p><code>http://localhost:8080/services</code></p>
-<ul>
-<li>Body Parameters</li>
-</ul>
-<pre><code class="language-json">{
-  &quot;service_code&quot;: &quot;up-p-testing&quot;,
-    &quot;uris&quot;: [
-        [
-            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-300&quot;, 
-            123
-        ],
-        [
-            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-3&quot;, 
-            345
-        ],
-        [
-            &quot;tag:ubiquitypress.com,2024|press|book:up-p-testing-305&quot;, 
-            678
-        ]
-    ]
-}
-</code></pre>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre><code class="language-json">{
-    &quot;status&quot;: &quot;ok&quot;,
-    &quot;code&quot;: 200,
-    &quot;count&quot;: 3,
-    &quot;data&quot;: &quot;200&quot;
-}
-
-</code></pre>
-<h3 id="delete-services">DELETE <code>services</code></h3>
-<h4 id="params_7">Params</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Location</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>service_code</td>
-<td>query</td>
-<td>string</td>
-<td>yes</td>
-<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
-</tr>
-<tr>
-<td>body</td>
-<td>body</td>
-<td>object</td>
-<td>no</td>
-<td>List of lists consisting of uris.</td>
-</tr>
-<tr>
-<td>uris</td>
-<td>body</td>
-<td>[array]</td>
-<td>yes</td>
-<td>Work_uri and external_id.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<p><code>http://localhost:8080/services</code></p>
-<ul>
-<li>Body Parameters</li>
-</ul>
-<pre><code class="language-json">{
-  &quot;service_code&quot;: &quot;up-p-testing&quot;,
-  &quot;uris&quot;: [
-    [
-      &quot;tag:ubiquitypress.com&quot;,
-      &quot;2024|press|book:up-p-testing-300&quot;
-    ],
-    [
-      &quot;tag:ubiquitypress.com&quot;,
-      &quot;2023|press|book:up-p-testing-310&quot;
-    ]
-  ]
-}
-</code></pre>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre><code class="language-json">{
-    &quot;status&quot;: &quot;ok&quot;,
-    &quot;code&quot;: 200,
-    &quot;count&quot;: 42,
-    &quot;data&quot;: &quot;2 works deleted from service, up-p-testing&quot;
-}
-
-</code></pre>
-<h3 id="get-service_events">GET <code>service_events</code></h3>
-<h4 id="params_8">Params</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Location</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>service_code</td>
-<td>query</td>
-<td>string</td>
-<td>yes</td>
-<td>Code used to identify a service (Press, Journal, Repository, etc).</td>
-</tr>
-<tr>
-<td>start_date</td>
-<td>query</td>
-<td>string</td>
-<td>yes</td>
-<td>ISO 8601 format (YYYY-MM-DD) as a starting date to retrieve the events from.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Request Example</p>
-</blockquote>
-<p><code>http://localhost:8080/service_events?service_code=up-p-testing&amp;start_date=2020-09-18</code></p>
-<blockquote>
-<p>Response Example</p>
-</blockquote>
-<pre><code class="language-json">{
-    &quot;status&quot;: &quot;ok&quot;,
-    &quot;code&quot;: 200,
-    &quot;count&quot;: 5,
-    &quot;data&quot;: [
-        {
-            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/crossref/citations/v1&quot;,
-            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
-            &quot;source&quot;: &quot;Crossref&quot;,
-            &quot;type&quot;: &quot;citations&quot;,
-            &quot;version&quot;: &quot;v1&quot;,
-            &quot;value&quot;: 600
-        },
-        {
-            &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/open-edition/downloads/v1&quot;,
-            &quot;namespace&quot;: &quot;https://metrics.operas-eu.org&quot;,
-            &quot;source&quot;: &quot;Open Edition&quot;,
-            &quot;type&quot;: &quot;downloads&quot;,
-            &quot;version&quot;: &quot;v1&quot;,
-            &quot;value&quot;: 500
         }
     ]
 }
