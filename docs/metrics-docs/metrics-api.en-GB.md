@@ -11,7 +11,7 @@ The following methods are allowed:
 | Method  | Route             | Description                                                                                                                     |
 | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `GET`   | [`/citations`](#get-citations)     | Retrieve citation metadata for a given work URI                                                                                 | 
-| `GET`   | [`/events`](#get-events)         | Retrieve measures from the API with various parameters. See below.                                                          |
+| `GET`   | [`/events`](#get-events)         | Retrieve events from the API with various parameters. See below.                                                          |
 | `POST`  | [`/events`](#post-events)         | Create a new event using JSON in the body                                                                                      |
 | `GET`   | [`/measures`](#get-measures)      | List the descriptions of the measures available in the API                                                                      |
 
