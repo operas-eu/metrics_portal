@@ -72,8 +72,8 @@ The following methods are allowed:
 |event_id|query|string| no |UUID saved in the Event table as an identifier.|
 | aggregation  | query    | string | no       | The results can be aggregated on certain values, i.e. aggregation on measure_uri. Aggregation must be one of the following options:<br>- `empty`<br>- `measure_uri,country_uri`<br>- `year,measure_uri`<br>- `month,measure_uri`<br>- `year,country_uri`<br>- `measure_uri`. |
 |filter|query|string| no |Many different options can be used in the filter, i.e. filtering on measure_uri or on work_uri. These can be combined or even used multiple times by separating them with a comma ","|
-|start_date|query|string| yes |ISO 8601 format (YYYY-MM-DD) as a starting date to retrieve the events from.|
-|end_date|query|string| no |ISO 8601 format (YYYY-MM-DD) as a end date to retrieve the events from.|
+|start_date|query|string| no |ISO 8601 format (YYYY-MM-DD) as a starting date to retrieve the events from.|
+|end_date|query|string| no |ISO 8601 format (YYYY-MM-DD) as a end date to retrieve the events until.|
 
 
 NOTE: You can use either the filter for the event_id, or the aggregation, or a combination of both, with the start and end dates.
@@ -275,13 +275,13 @@ NOTE: You can use either the filter for the event_id, or the aggregation, or a c
 
 ```json
 {
-    "work_uri": "http://example.com/work/2",
+    "work_uri": "info:doi:10.5334/bcd",
     "measure_uri": "http://example.com/measure/2",
     "timestamp": "2023-10-01T12:00:00+0000",
     "value": 100,
     "event_uri": "http://example.com/event/2",
-    "country_uri": "http://example.com/country/2",
-    "uploader_uri": "http://example.com/uploader/2"
+    "country_uri": "urn:iso:std:3166:-2:US",
+    "uploader_uri": "acct:tech@ubiquitypress.com"
 }
 ```
 
@@ -295,13 +295,13 @@ NOTE: You can use either the filter for the event_id, or the aggregation, or a c
     "data": [
         {
             "event_id": "22bfe31d-0374-45d6-9e6a-f8285b2bc25e",
-            "work_uri": "tag:ubiquitypress.com,2024|press|book:up-p-testing-300",
+            "work_uri": "info:doi:10.1242/dev.164269",
             "measure_uri": "https://metrics.operas-eu.org/world-reader/users/v1",
             "timestamp": "2024-01-01T00:00:00+0000",
             "value": 100,
             "event_uri": "event_uri_1",
             "country_uri": "urn:iso:std:3166:-2:ZW",
-            "uploader_uri": "uploader_uri_1"
+            "uploader_uri": "acct:tech@ubiquitypress.com"
         }
     ]
 }
