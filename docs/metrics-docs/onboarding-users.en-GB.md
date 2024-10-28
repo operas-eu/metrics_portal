@@ -94,7 +94,7 @@ Follow the steps in this section to onboard your metrics to the OPERAS metrics s
 6. User installs and configures the [metrics widget][8].
 7. User arranges a schedule for manually refreshing metrics.
 8. Be prepared to make software updates at the Provider’s request (for performance, quality, or security improvements, or to extend the functionality)
-9. Please contact [Rowan Hatherley][21] or [Cristian Garcia][24] for any enquiries or issues.
+9. Please contact [Rowan Hatherley][10] or [Cristian Garcia][9] for any enquiries or issues.
 
 ## Process diagram for onboarding user
 ![Process Diagram](/images/user-onboarding.png)
@@ -119,3 +119,4 @@ Once the system is working as expected to add the new metrics to the OPERAS syst
 [13]: https://gitlab.com/ubiquitypress/identifier_translation_service "Identifier Translator service repo"
 [14]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper "Metrics Driver Wrapper repo"
 [15]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper/-/blob/master/src/yaml/demo-access_logs.yaml?ref_type=heads "Access Logs yaml"
+
