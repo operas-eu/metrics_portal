@@ -897,8 +897,25 @@
 <div id="value-display"></div>
 <p><strong>Description:</strong></p>
 <div class="tile-1" style="text-align:center; color:black">
-Total sessions for the landing page of a work, as determined by Google Analytics. A Session is a group of visits made by the same user within a continuous time frame, and ends after 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same work will be counted as one session.
+Total views of the landing page of a work, as determined by Google Analytics. In order for a subsequent view of the landing page from the same user to be counted, there must be a gap of at least 30 minutes from the last view of that landing page.
 </div>
+
+<p><strong></p>
+<p>For Example:
+</strong></p>
+<div style="color:black">
+    <ul>
+        <li>3:00pm - 1 view counted</li>
+        <li>3:16pm [within 30 mins of last view] - 0 views counted</li>
+        <li>3:33pm [within 30 mins of last view] - 0 views counted</li>
+        <li>3:46pm [within 30 mins of last view] - 0 views counted</li>
+        <li>4:02pm [within 30 mins of last view] - 0 views counted</li>
+        <li>4:05pm [within 30 mins of last view] - 0 views counted</li>
+        <li>4:39pm [more than 30 mins since last view] - 1 view counted</li>
+    </ul>
+    <p>Total views counted:<strong> 2</strong></p>
+</div>
+
 <script>
 document.getElementById('value-display').innerHTML = `
   <h2><strong>up-ga/sessions/v1</strong></h2></br>
