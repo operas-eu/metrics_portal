@@ -895,25 +895,63 @@
 
 <h1 id="up-ga-sessions-measure">Up-ga Sessions Measure</h1>
 <div id="value-display"></div>
-<p><strong>Description:</strong></p>
+<p><br>
+<strong>Description:</strong></p>
 <div class="tile-1" style="text-align:center; color:black">
-Total views of the landing page of a work, as determined by Google Analytics. In order for a subsequent view of the landing page from the same user to be counted, there must be a gap of at least 30 minutes from the last view of that landing page.
+Total views of the landing page of a work, as determined by Google Analytics (i.e. webserver logs) of the website. To count multiple views of the same landing page by the same user, there must be a gap of at least 30 minutes from the last view of that landing page, even if that previous view was not counted.
 </div>
 
-<p><strong></p>
-<p>For Example:
+<p><strong>
+For Example:
 </strong></p>
-<div style="color:black">
-    <ul>
-        <li>3:00pm - 1 view counted</li>
-        <li>3:16pm [within 30 mins of last view] - 0 views counted</li>
-        <li>3:33pm [within 30 mins of last view] - 0 views counted</li>
-        <li>3:46pm [within 30 mins of last view] - 0 views counted</li>
-        <li>4:02pm [within 30 mins of last view] - 0 views counted</li>
-        <li>4:05pm [within 30 mins of last view] - 0 views counted</li>
-        <li>4:39pm [more than 30 mins since last view] - 1 view counted</li>
-    </ul>
-    <p>Total views counted:<strong> 2</strong></p>
+<div  style="text-align:center; color:black">
+<table>
+    <tr>
+        <th>Time of visit</th>
+        <th>Minutes from last visit</th>
+        <th>Views counted</th>
+    </tr>
+    <tr>
+        <td>3:00 pm</td>
+        <td>-</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>3:16 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:33 pm</td>
+        <td>29</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:46 pm</td>
+        <td>13</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:02 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:05 pm</td>
+        <td>3</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:39 pm</td>
+        <td>34</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td><strong>TOTAL VIEWS</strong></td>
+        <td></td>
+        <td><strong>2</strong></td>
+    </tr>
+</table>
 </div>
 
 <script>
