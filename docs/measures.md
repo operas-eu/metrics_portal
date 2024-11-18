@@ -41,3 +41,6 @@
 | [Figshare Reads](figshare/views/v1.md) | https://metrics.operas-eu.org     | figshare/views/v1           | Figshare                     | views      | 1       |
 | [Figshare Downloads](figshare/downloads/v1.md) | https://metrics.operas-eu.org     | figshare/downloads/v1           | Figshare                     | downloads      | 1       |
 | [Figshare Shares](figshare/shares/v1.md) | https://metrics.operas-eu.org     | figshare/shares/v1           | Figshare                     | shares      | 1       |
+| [UPLO Sessions](uplo/sessions/v1.md) | https://metrics.operas-eu.org      | uplo/sessions/v1      | UPLO                    | sessions   | 1       |
+| [UPLO Reads](uplo/reads/v1.md) | https://metrics.operas-eu.org     | uplo/reads/v1        | UPLO                     | reads   | 1       |
+| [UPLO downloads](uplo/downloads/v1.md) | https://metrics.operas-eu.org     | uplo/downloads/v1     | UPLO                     | downloads  | 1       |

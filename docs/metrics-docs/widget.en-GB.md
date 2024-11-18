@@ -56,7 +56,7 @@ This script does two main things:
 
 ⚒️ The minified version of the script above is recommended to improve performance, but you can also use or modify the [unminified version](https://gitlab.com/ubiquitypress/metrics-widget/-/blob/master/dist/index.html#L205-232).
 
-ℹ️ In the example above, you will automatically receive the latest changes to the widget in the `v1` release. If you wish to change or understand this behaviour, see [Versioning](#versioning).
+🛈 In the example above, you will automatically receive the latest changes to the widget in the `v1` release. If you wish to change or understand this behaviour, see [Versioning](#versioning).
 
 Once you’ve added the `<script>` tag, you should see the following message in your browser console:
 
@@ -81,7 +81,7 @@ Although it is recommended to use the default CSS and modify any classes where r
 
 All classes within the widget are prefixed with `mw__` to avoid any style conflicts.
 
-ℹ️ Similar to the JavaScript code, you can also use either `latest` to always use the latest version of the widget’s CSS, or provide a specific version instead.
+🛈 Similar to the JavaScript code, you can also use either `latest` to always use the latest version of the widget’s CSS, or provide a specific version instead.
 
 ## Versioning
 
@@ -197,7 +197,7 @@ Unless otherwise instructed, it’s likely the only setting you’ll need to spe
 
 For `cdn_scripts_url` and `cdn_images_url`, the `{version}` variable in the URL will be automatically replaced by the version of the widget you are running (as defined in the [Getting Started](#getting-started) section). This isn’t needed, but recommended to prevent a mismatch between file versions.
 
-ℹ️ If you are using the auto-updating `-latest` version of the widget, the `{version}` will be replaced with the _actual_ version number of the widget. So if the latest version is `1.0.0`, the variable will be replaced with `1.0.0`.
+🛈 If you are using the auto-updating `-latest` version of the widget, the `{version}` will be replaced with the _actual_ version number of the widget. So if the latest version is `1.0.0`, the variable will be replaced with `1.0.0`.
 
 ### Options
 
