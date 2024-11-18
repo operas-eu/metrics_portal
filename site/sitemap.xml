@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://metrics.operas-eu.org/crossref/citations/v1/</loc>
+         <lastmod>2024-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://metrics.operas-eu.org/ekt/downloads/v1/</loc>
          <lastmod>2024-11-18</lastmod>
          <changefreq>daily</changefreq>

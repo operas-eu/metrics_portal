@@ -44,3 +44,4 @@
 | [UPLO Sessions](uplo/sessions/v1.md) | https://metrics.operas-eu.org      | uplo/sessions/v1      | UPLO                    | sessions   | 1       |
 | [UPLO Reads](uplo/reads/v1.md) | https://metrics.operas-eu.org     | uplo/reads/v1        | UPLO                     | reads   | 1       |
 | [UPLO downloads](uplo/downloads/v1.md) | https://metrics.operas-eu.org     | uplo/downloads/v1     | UPLO                     | downloads  | 1       |
+| [Crossref citations](crossref/citations/v1.md) | https://metrics.operas-eu.org     | crossref/citations/v1     | Crossref                     | citations  | 1       |
