@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://metrics.operas-eu.org/crossref/citations/v1/</loc>
+         <lastmod>2024-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://metrics.operas-eu.org/ekt/downloads/v1/</loc>
          <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
@@ -282,6 +287,21 @@
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-logs/sessions/v1/</loc>
+         <lastmod>2024-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://metrics.operas-eu.org/uplo/downloads/v1/</loc>
+         <lastmod>2024-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://metrics.operas-eu.org/uplo/reads/v1/</loc>
+         <lastmod>2024-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://metrics.operas-eu.org/uplo/sessions/v1/</loc>
          <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
