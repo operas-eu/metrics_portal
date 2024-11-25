@@ -1,6 +1,9 @@
 # Publishers
 
-## This is a list of publishers whose content has metrics available in the OPERAS Metrics database:
+<h2 id="publisherCount">This is a list of the [NUMBER_OF_PUBLISHERS] publishers whose content has metrics available in the OPERAS Metrics database:</h2>
+<ul id="publisherList">
+
+<h3> Use the search field bellow to narrow down your search:</h3>
 
 <input type="text" id="publisherSearch" placeholder="Search for publishers..." style="margin-bottom: 20px; width: 100%; padding: 10px; font-size: 16px;">
 
@@ -293,3 +296,19 @@
     <li>vdf Hochschulverlag AG</li>
     <li>wbv Publikation
 </ul>
+
+<script>
+// Get the unordered list element by its ID
+const publisherList = document.getElementById('publisherList');
+
+// Get all the list items within the unordered list
+const listItems = publisherList.getElementsByTagName('li');
+
+// Retrieve the count of the list items
+const count = listItems.length;
+
+// Update the text of the h2 element with the count
+const publisherCountElement = document.getElementById('publisherCount');
+publisherCountElement.innerHTML = `This is a list of the ${count} publishers whose content has metrics available in the OPERAS Metrics database.`;
+
+</script>
