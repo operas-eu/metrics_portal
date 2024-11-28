@@ -60,9 +60,24 @@ At the most basic level, the only resources required to enable annotations on an
   page, including within the EPUB content. The code for this working implementation can be found in
   [this git repository](https://github.com/futurepress/hypothesis-reader).
 
+
 ## PDF
 
-TBC
+To enable annotations on a PDF document embedded in your website using Hypothesis, you will need to include the Hypothesis CDN in your HTML. Below is a simple implementation:
+
+```
+<script src="https://hypothesis.is/embed.js"></script>
+```
+
+You can embed the PDF using an iframe as follows:
+```
+<iframe src="https://hyp.is/your-pdf-url.pdf" width="600" height="800"></iframe>
+```
+
+Make sure to replace 'your-pdf-url.pdf' with the actual URL of your PDF document.
+
+A more extended sample could be found in [this git repository](https://github.com/hypothesis/pdf.js-hypothes.is).
+
 
 ## Embed Dublin Core
 
