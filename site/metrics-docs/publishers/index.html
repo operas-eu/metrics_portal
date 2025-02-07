@@ -1022,7 +1022,7 @@ const listItems = publisherList.getElementsByTagName('li');
 // Retrieve the count of the list items
 const count = listItems.length;
 
-
+// Create the last month date to display
 const today = new Date();
 const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
 const lastDay = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
@@ -1110,8 +1110,6 @@ publisherCountElement.innerHTML = `This is a list of the ${count} publishers who
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../js/search.js"></script>
-      
-        <script src="../../js/date.js"></script>
       
     
   </body>
