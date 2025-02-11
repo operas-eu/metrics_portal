@@ -22,7 +22,7 @@ Browse the full list of measures to see how we generate our metrics.
     <i class="fa-solid fa-book-open fa-4x" style="color:#64205d"></i>
     <h2 style="margin-top: 10px!important">Getting Started</h2>
         <p>Check out how you can start implementing our code in your platform</p>
-    <a href="/metrics-docs/getting-started.en-GB/" class="initButtons">Get started!</a>
+    <a href="/metrics-docs/getting-started/" class="initButtons">Get started!</a>
 </div>
 <section markdown="1" style="display: flex; text-align:center">
   <div class="tile">

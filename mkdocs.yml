@@ -81,29 +81,29 @@ nav:
   - '<i class="fa-solid fa-chart-line"></i>&nbsp;&nbsp;Measures': measures.md
   - '<i class="fa-sharp-duotone fa-solid fa-heart"></i>&nbsp;&nbsp;Our Principles': principles.md
   - '<i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;Documentation':
-      - Getting Started: metrics-docs/getting-started.en-GB.md
-      - Altmetrics: metrics-docs/altmetrics.en-GB.md
-      - Annotation: metrics-docs/annotation.en-GB.md
-      - Countries API: metrics-docs/countries-api.en-GB.md
-      - Crossref Cited-by: metrics-docs/crossref-citedby.en-GB.md      
-      - OPERAS Metrics Overview: metrics-docs/overview.en-GB.md
-      - Drivers: metrics-docs/drivers.en-GB.md      
-      - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
-      - Onboarding Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md
-      - Metrics API: metrics-docs/metrics-api.en-GB.md
+      - Getting Started: metrics-docs/getting-started.md
+      - Altmetrics: metrics-docs/altmetrics.md
+      - Annotation: metrics-docs/annotation.md
+      - Countries API: metrics-docs/countries-api.md
+      - Crossref Cited-by: metrics-docs/crossref-citedby.md      
+      - OPERAS Metrics Overview: metrics-docs/overview.md
+      - Drivers: metrics-docs/drivers.md      
+      - Onboarding Users: metrics-docs/onboarding-users.md
+      - Onboarding Metrics: metrics-docs/onboarding-sending-metrics.md
+      - Metrics API: metrics-docs/metrics-api.md
       - Drivers & Plugins:
-          - Access Logs: metrics-docs/access-logs-local.en-GB.md 
-          - Google Analytics: metrics-docs/google-analytics.en-GB.md
-          - Google Books: metrics-docs/google-books.en-GB.md
-          - Identifier Translation Service: metrics-docs/identifier-translation-service.en-GB.md
-          - IRUS-UK: metrics-docs/irus-uk.en-GB.md
-          - JSTOR: metrics-docs/jstor.en-GB.md
-          - Matomo: metrics-docs/matomo.en-GB.md
-          - Onboarding Sending Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md
-          - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
-          - Server Access Logs: metrics-docs/server-access-logs.en-GB.md
-          - Tokens API: metrics-docs/tokens-api.en-GB.md
-          - Unglue.it: metrics-docs/unglueit.en-GB.md
-      - Widget: metrics-docs/widget.en-GB.md
+          - Access Logs: metrics-docs/access-logs-local.md 
+          - Google Analytics: metrics-docs/google-analytics.md
+          - Google Books: metrics-docs/google-books.md
+          - Identifier Translation Service: metrics-docs/identifier-translation-service.md
+          - IRUS-UK: metrics-docs/irus-uk.md
+          - JSTOR: metrics-docs/jstor.md
+          - Matomo: metrics-docs/matomo.md
+          - Onboarding Sending Metrics: metrics-docs/onboarding-sending-metrics.md
+          - Onboarding Users: metrics-docs/onboarding-users.md
+          - Server Access Logs: metrics-docs/server-access-logs.md
+          - Tokens API: metrics-docs/tokens-api.md
+          - Unglue.it: metrics-docs/unglueit.md
+      - Widget: metrics-docs/widget.md
       - Publishers: metrics-docs/publishers.md
 docs_dir: docs
