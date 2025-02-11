@@ -2,11 +2,11 @@ site_name: Metrics Documentation
 site_url: "http://metrics.operas-eu.org/"
 
 extra_css:
-  - 'css/css.css?v=1.0'
-  - 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css?v=1.0'
+  - css/css.css?v=1.0
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css?v=1.0
 
 extra_javascript:
-  - js/search.js
+  - js/search.js?v=1.0.1
 
 plugins:
   - awesome-pages
@@ -71,6 +71,7 @@ extra:
       link: https://github.com/hirmeos
   awesome_pages:
     use_trailing_slash: false
+  version: !ENV [GITHUB_SHA, 'random']
      
 copyright: "<h3><a href='https://operas-eu.org/'>OPERAS</a></h3>
 <p>Unless otherwise indicated, all materials created by the Hirmeos Project are licensed under a 
