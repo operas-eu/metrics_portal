@@ -7,6 +7,7 @@ extra_css:
 
 extra_javascript:
   - js/search.js?v=1.0.1
+  - js/service-worker.js
 
 plugins:
   - awesome-pages
