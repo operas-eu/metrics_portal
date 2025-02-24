@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const todayDate = `${year}-${month}-${day}`;
 
     // API endpoint
-    const apiUrl = `https://metrics-api.operas-eu.org/publishers?timestamp=${todayDate}`;
+    const apiUrl = `https://metrics-api.operas-eu.org/publishers`;
 
     // Get the publisher list element
     const publisherList = document.getElementById('publisherList');

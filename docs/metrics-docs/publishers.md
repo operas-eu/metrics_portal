@@ -31,5 +31,5 @@ const lastMonthFirstDay = `01/${lastMonth.getMonth() + 1}/${lastMonth.getFullYea
 
 // Update the text of the h2 element with the count
 const publisherCountElement = document.getElementById('publisherCount');
-publisherCountElement.innerHTML = `This is a list of the ${count} publishers who have recorded book metrics in the OPERAS Metrics database in the last month, from ${lastMonthFirstDay} to ${lastMonthLastDay}:`;
+publisherCountElement.innerHTML = `This is a list of the ${count} publishers who have recorded book metrics in the OPERAS Metrics database up to the last month, ${lastMonthLastDay}:`;
 </script>
