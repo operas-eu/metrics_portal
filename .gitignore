@@ -1,0 +1,40 @@
+# # I'm not sure if this can safely be added?
+## MkDocs build directory
+#site/
+
+# Python virtual environment
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Local development settings
+.env
+.envrc
+.direnv/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Temporary files
+*.bak
+*.tmp
+*~
