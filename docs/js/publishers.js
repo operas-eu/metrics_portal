@@ -1,31 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("publisherSearch");
-    const publisherList = document.getElementById("publisherList");
-    const publishers = publisherList.getElementsByTagName("li");
-  
-    searchInput.addEventListener("input", function () {
-      const filter = searchInput.value.toLowerCase();
-      for (let i = 0; i < publishers.length; i++) {
-        const text = publishers[i].textContent || publishers[i].innerText;
-        publishers[i].style.display = text.toLowerCase().includes(filter) ? "" : "none";
-      }
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get today's date in YYYY-MM-DD format
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Ensure two-digit month
-    const day = String(today.getDate()).padStart(2, '0'); // Ensure two-digit day
-    const todayDate = `${year}-${month}-${day}`;
-
     // API endpoint
     const apiUrl = `https://metrics-api.operas-eu.org/publishers`;
 
     // Get the publisher list element
     const publisherList = document.getElementById('publisherList');
-
+    // Create the last month date to display
+    const today = new Date();
+    const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+    const lastDay = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    const lastMonthLastDay = `${lastDay}/${lastMonth.getMonth() + 1}/${lastMonth.getFullYear()}`;
     // Fetch data from the API
     fetch(apiUrl)
         .then(response => response.json())
@@ -35,16 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 const listItems = publisherList.querySelectorAll('li');
                 listItems.forEach(item => item.remove());
 
-                // Populate the list with publishers
+                // Create a Set to store unique publisher names
+                const uniquePublishers = new Set();
+
+                // Add each publisher name to the Set
                 data.data.forEach(publisher => {
-                    const li = document.createElement('li');
-                    li.textContent = publisher.publisher_name;
-                    publisherList.appendChild(li);
+                    uniquePublishers.add(publisher.publisher_name);
                 });
 
-                // Update count
+                // Convert Set to Array, sort alphabetically, and create list items
+                Array.from(uniquePublishers)
+                    .sort()
+                    .forEach(publisherName => {
+                        const li = document.createElement('li');
+                        li.textContent = publisherName;
+                        publisherList.appendChild(li);
+                    });
+
+                // Update count with unique publisher count
                 const publisherCountElement = document.getElementById('publisherCount');
-                publisherCountElement.innerHTML = `This is a list of the ${data.count} publishers who have recorded book metrics in the OPERAS Metrics database:`;
+                publisherCountElement.innerHTML = `This is a list of the ${uniquePublishers.size} publishers who have have at least one book with metrics in the OPERAS Metrics database, up to ${lastMonthLastDay}. Note that a publisher may be included in this list where they are participating in  OPERAS Metrics via a 3rd party platform (eg OAPEN), so they may not be participating in OPERAS Metrics for all of their books:`;
             } else {
                 console.error("Invalid response format", data);
             }
