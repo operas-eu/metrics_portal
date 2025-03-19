@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Update count with unique publisher count
                 const publisherCountElement = document.getElementById('publisherCount');
-                publisherCountElement.innerHTML = `This is a list of the ${uniquePublishers.size} publishers who have have at least one book with metrics in the OPERAS Metrics database, up to ${lastMonthLastDay}. Note that a publisher may be included in this list where they are participating in  OPERAS Metrics via a 3rd party platform (eg OAPEN), so they may not be participating in OPERAS Metrics for all of their books:`;
-            } else {
+                publisherCountElement.innerHTML = `This is a list of the ${uniquePublishers.size} publishers who have at least one book with metrics in the OPERAS Metrics database, up to ${lastMonthLastDay}. Note that a publisher may be included in this list because they are participating in OPERAS Metrics via a third-party platform (e.g., OAPEN), so they may not be participating in OPERAS Metrics for all of their books:`;
                 console.error("Invalid response format", data);
             }
         })

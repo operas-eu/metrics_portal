@@ -937,7 +937,7 @@
 
 
 <h1 id="publishers">Publishers</h1>
-<h2 id="publisherCount"></h2>
+<h3 id="publisherCount"></h3>
 <ul id="publisherList">
 <span id="last-month-date"></span>
 
@@ -948,28 +948,6 @@
 
 <ul id="publisherList">
 </ul>
-
-<script>
-// Get the unordered list element by its ID
-const publisherList = document.getElementById('publisherList');
-
-// Get all the list items within the unordered list
-const listItems = publisherList.getElementsByTagName('li');
-
-// Retrieve the count of the list items
-const count = listItems.length;
-
-// Create the last month date to display
-const today = new Date();
-const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
-const lastDay = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-const lastMonthLastDay = `${lastDay}/${lastMonth.getMonth() + 1}/${lastMonth.getFullYear()}`;
-const lastMonthFirstDay = `01/${lastMonth.getMonth() + 1}/${lastMonth.getFullYear()}`;
-
-// Update the text of the h2 element with the count
-const publisherCountElement = document.getElementById('publisherCount');
-publisherCountElement.innerHTML = `This is a list of the ${count} publishers who have recorded book metrics in the OPERAS Metrics database up to the last month, ${lastMonthLastDay}:`;
-</script>
 
 
 
@@ -1046,7 +1024,7 @@ publisherCountElement.innerHTML = `This is a list of the ${count} publishers who
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/search.js?v=1.0.1"></script>
+        <script src="../../js/publishers.js?v=1.0.1"></script>
       
         <script src="../../js/service-worker.js"></script>
       
