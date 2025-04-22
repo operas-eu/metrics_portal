@@ -8,7 +8,7 @@
 </style> 
 
 
-# OPERAS Metrics Portal
+# <img src='images/logo.png' width='150'>  Metrics Service
 
 This site serves as an entry point to those interested in how the HIRMEOS project collects usage and alternative metrics for Open Access publications, the motivation behind this project, and how you may implement our Open Source code in your own platform.
 

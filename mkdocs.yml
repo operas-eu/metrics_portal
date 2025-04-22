@@ -74,10 +74,11 @@ extra:
     use_trailing_slash: false
   version: !ENV [GITHUB_SHA, 'random']
      
-copyright: "<h3><a href='https://operas-eu.org/'>OPERAS</a></h3>
+copyright: "<a href='https://operas-eu.org/' target='_blank'><img src='/images/logo.png' width='200'></a>
 <p>Unless otherwise indicated, all materials created by the Hirmeos Project are licensed under a 
 <br><a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>. 
-Privacy policy - <a href='https://metrics.operas-eu.org/acceptable-use-policy'>Acceptable Use Policy and Conditions of Use</a></p>"
+Privacy policy - <a href='https://metrics.operas-eu.org/acceptable-use-policy'>Acceptable Use Policy and Conditions of Use</a></p>
+"
 
 nav:
   - '<i class="fa-solid fa-chart-line"></i>&nbsp;&nbsp;Measures': measures.md
