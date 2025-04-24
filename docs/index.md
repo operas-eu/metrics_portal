@@ -7,8 +7,10 @@
   }
 </style> 
 
-
-# <img src='images/logo.png' width='150'>  Metrics Service
+<div style="text-align: center; display: flex; align-items: center;">
+    <img src='images/Metrics Service logo.png' width='150' style="margin-right: 10px; vertical-align: middle;">
+    <h1 style="margin: 0;">OPERAS Metrics Service</h1>
+</div>
 
 This site serves as an entry point to those interested in how the HIRMEOS project collects usage and alternative metrics for Open Access publications, the motivation behind this project, and how you may implement our Open Source code in your own platform.
 
