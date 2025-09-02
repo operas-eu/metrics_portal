@@ -1,7 +1,7 @@
 # Drivers
 Drivers are a small Python package used by the metrics-driver-wrapper app and each of them has a different purpose 
 to help us manage the external API calls and manage the 'raw' data fetched by them for each plugin.
-They can be found on [PyPI][8], and each of them has been fully tested separately.
+They can be found on [PyPI][9], and each of them has been fully tested separately.
 
 ## Find bellow the list of drivers used by the Metrics-Drivers-Wrapper
 
@@ -12,6 +12,7 @@ They can be found on [PyPI][8], and each of them has been fully tested separatel
 - [Matomo][5]
 - [Unglue.it][6]
 - [Google Analytics 3 (being deprecated)][7]
+- [Figshare][8]
 
 
 [1]: https://metrics.operas-eu.org/metrics-docs/access-logs-local "Access logs Local"
@@ -21,4 +22,5 @@ They can be found on [PyPI][8], and each of them has been fully tested separatel
 [5]: https://metrics.operas-eu.org/metrics-docs/matomo "Matomo"
 [6]: https://metrics.operas-eu.org/metrics-docs/unglueit "Unglue.it"
 [7]: https://metrics.operas-eu.org/metrics-docs/google-analytics "Google Analytics"
-[8]: https://pypi.org/ "Pypi"
+[8]: https://metrics.operas-eu.org/metrics-docs/figshare "Figshare"
+[9]: https://pypi.org/ "Pypi"

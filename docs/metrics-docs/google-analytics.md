@@ -22,6 +22,47 @@ This driver allows programmatic retrieval of stats reports from Google’s stand
 | `view_id`               | View ID, string.                                                                                   |
 | `views`                 | Configuration for “view” metrics.                                                                  |
 
-Example configuration file:
 
-Please refer to the metrics drivers wrapper for an example configuration file.
+### Example of plugin configuration file:
+
+```yaml
+events:
+  dimensions:
+  - ga:test
+  - ga:test
+  - ga:test
+  - ga:test
+  headers:
+    identifier_name: ga:test
+  identifier_type: https
+  measures:
+    downloads:
+      categories:
+      - pdf download
+      - epub download
+      - mobi download
+      measure: https://metrics.test.org/test/downloads/v1
+    reads:
+      categories:
+      - epub view
+      measure: https://metrics.test-eu.org/test/reads/v1
+  metrics:
+  - ga:test
+filters:
+- /test/books
+- /test/chapters
+json_key:
+  auth_provider_x509_cert_url: https://www.test.com/oauth2/v1/certs
+  auth_uri: https://test.com/o/oauth2/auth
+  client_email: test@test.com
+  client_id: '999999999999999999999'
+  client_x509_cert_url: https://www.test.com
+  private_key: 'test private key'
+  private_key_id: 99999999999999999999999999999999999999999
+  project_id: test-99999
+  token_uri: https://test.com/token
+  type: test
+prefix: https://www.test.com
+regex:
+- https:\/\/(www\.)?test\.com\/site\/(books|chapters)\/([em]\/)?10\.?\d{3,9}(/[-._;():A-Za-z0-9]+)+
+```
