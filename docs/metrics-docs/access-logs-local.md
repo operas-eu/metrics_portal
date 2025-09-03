@@ -47,7 +47,6 @@ rollover: false
 cutoff_days: 3
 start_date: '2023-06-01'
 uri_scheme: "info:doi"
-
 active: false   # set to true for local testing...
 ```
 
