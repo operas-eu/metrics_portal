@@ -23,9 +23,31 @@ a URL within the last `session_timeout` (e.g. half-hour)
 | `session_timeout`       | Length of session, in seconds, int.                                                                |
 | `rollover`              | Extend session if new requests occur within the timeout window, boolean.                                                                  |
 
-Example configuration file:
+### Example of plugin configuration file:
 
-Please refer to the metrics drivers wrapper for an example configuration file.
-
+```yaml
+measure_regexes: [
+  {
+    name: "downloads",
+    measure: 'https://test-metrics.com/access-logs-test/downloads/v1',
+    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/galley/\d+/download/?', ],
+  },
+  {
+    name: "sessions",
+    measure: 'https://metrics.com/access-logs-test/sessions/v1',
+    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/?', ],
+  }
+]
+excluded_ips: ["8.8.8.8", "9.9.9.9"]
+excluded_urls: ["https://malformed_url.com"]
+logdir: "plugins/access_logs_local/logs"
+url_prefix: 'https://cjs.sljol.info'
+session_timeout: 1800
+rollover: false
+cutoff_days: 3
+start_date: '2023-06-01'
+uri_scheme: "info:doi"
+active: false   # set to true for local testing...
+```
 
 [1]: https://pypi.org/project/access-logs-local/ "Pypi link" 

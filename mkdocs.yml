@@ -107,6 +107,7 @@ nav:
           - Server Access Logs: metrics-docs/server-access-logs.md
           - Tokens API: metrics-docs/tokens-api.md
           - Unglue.it: metrics-docs/unglueit.md
+          - Figshare: metrics-docs/figshare.md
       - Widget: metrics-docs/widget.md
       - Publishers: metrics-docs/publishers.md
 docs_dir: docs
